@@ -4,17 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Oxygen:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <script defer src="/js/app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/ae6121708a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
     <title>Tony's Portfolio</title>
 </head>
 <body>
     <header>
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Tony Yu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#hero">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about-me">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#portfolio">Portfolio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#contact">Contact <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <body>
-        <h1>Portfolio</h1>    
+
+    <main>
+        <section id="hero" class="container">
+            <h2>Hi, I'm Tony Yu</h2>
+            <h2>I'm a Full Stack Software Engineer</h2>
+            <h2>Please take a look around.</h2>
+        </section>
+        <section id="about-me" class="container">
+            <h2>ABOUT</h2>
+            <img src="#" alt="My photo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, fugiat. Consequatur sed voluptates, incidunt cum labore dignissimos necessitatibus, beatae est quidem nemo perferendis accusamus? Eaque laudantium aliquid omnis explicabo dolore!Magnam distinctio temporibus reprehenderit repellendus aliquam. Maiores deserunt quidem sit architecto cum error, doloribus nisi veritatis, cupiditate dolor excepturi est et asperiores cumque. Ipsam, possimus atque voluptatum repellat quisquam quasi?</p>
+        </section>
+        <section id="portfolio" class="container">
+            <h2>PORTFOLIO</h2>
+            <div class="project-card">
+                <a href="">
+                    <img class="proj-img1" src="" alt="Project image1">
+                    <div class="proj-desc">
+                        <h4>Project Name1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                    </div> 
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="">
+                    <img class="proj-img1" src="" alt="Project image2">
+                    
+                    <div class="proj-desc">
+                        <h4>Project Name2</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sit magnam! Nemo sint vero error officia eum! Corporis, adipisci. Amet incidunt pariatur consectetur at repudiandae minima eum repellendus, explicabo labore!Soluta ducimus doloremque repellendus dolorem reprehenderit quia suscipit itaque accusamus quaerat commodi totam, at dolore quae laborum. Enim, amet voluptates totam ab, consectetur hic in voluptatibus est aliquid quaerat eum!</p>
+                    </div> 
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="">
+                    <img class="proj-img1" src="" alt="Project image3">
+                    
+                    <div class="proj-desc">
+                        <h4>Project Name3</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora incidunt porro nihil ea, culpa asperiores vitae eaque ipsam consequuntur possimus fuga natus quis laborum qui blanditiis ullam accusamus obcaecati corporis dicta illum nesciunt. Quasi nesciunt quaerat, illo sapiente eligendi minima.</p>
+                    </div> 
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="">
+                    <img class="proj-img1" src="" alt="Project image4">
+                    
+                    <div class="proj-desc">
+                        <h4>Project Name4</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                    </div> 
+                </a>
+            </div>
+        </section>
+        <section id="contact" class="container">
+            <h2>CONTACT</h2>
+            <a href="emailto:xtonyyu@gmail.com">
+                <i><i class="fas fa-envelope-square fa-2x"><p>Email: xtonyyu@gmail.com</p></i>
+            </a>
+
+            <a href="https://github.com/xTonyYu">
+                <i class="fab fa-github-square fa-2x"><p>Github: https://github.com/xTonyYu</p></i>
+            </a>
+            <a href="https://www.linkedin.com/in/xtonyyu/">
+                <i class="fab fa-linkedin fa-2x">      <p>LinkedIn: https://www.linkedin.com/in/xtonyyu/</p></i>
+            </a>
+        </section>
     </body>
+    
     <footer>
 
     </footer>

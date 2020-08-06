@@ -1,0 +1,43 @@
+* {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Oxygen', sans-serif;
+    /* font-family: 'Noto Sans TC', sans-serif; */
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+main {
+    background-color: rgb(24, 25, 29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    width: 100%;
+}
+
+.container {
+    width: 85vw;
+    min-width: 250px;
+
+}
+
+/* hero */
+
+#hero {
+    height: 95vh;
+    background-color: blanchedalmond;
+    
+}
+
+/* about-me */
+
+
+/* portfolio */
+
+
+/* contact */
