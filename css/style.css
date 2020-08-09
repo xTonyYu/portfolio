@@ -16,8 +16,23 @@ main {
     align-items: center;
 }
 
+h3 {
+    margin: 15px auto;
+}    
+h4, h5 {
+    display: inline;
+}
+h5 {
+    color: rgb(136,219,255);
+}
 p {
     width: 100%;
+}
+
+.front-page h1 {
+    /* color: magenta; */
+    color: rgb(0, 255, 255);
+    font-size: 4rem;
 }
 
 .container {
@@ -30,10 +45,16 @@ p {
 
 #hero {
     height: 95vh;
-    background-color: blanchedalmond;
-    
+    /* background-color: rgb(53, 53, 53); */
+    background-color: rgb(24, 25, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.front-page {
+    margin: 20px;
+    text-align: center;
+}
 /* about-me */
 
 
