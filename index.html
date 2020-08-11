@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Oxygen:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script	defer src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -17,7 +17,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
-            <a class="navbar-brand" href="#">Tony Yu</a>
+            <a class="navbar-brand" href="">xTonyYu</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,77 +45,124 @@
         <section id="hero" class="container">
             <div class="front-page">
                 <h3>Hello, I'm </h3>
-                <h1> Tony Yu</h1>
+                <h1>Tony Yu</h1>
                 <h3>I'm a Full Stack Developer</h3>
                 <h3>I help make things work</h3>
             </div>
         </section>
 
         <section id="about-me" class="container">
-            <h2>ABOUT</h2>
-            <h5>background-image:</h5>
-                <img src="#" alt="My photo">
-            <h5>background-color:</h5>
-                <p>I was train as a nuclear engineer but never worked as one.  Leveraging my analytical skills and cheerful, empathetic personality, I built a nice career in the field of financial reporting and analysis.</p>
-            <h5>transition:</h5>
-                <p>After years in the field, I decided to leave it behind and start a new direction in February 2020 (right before pandemic stay-at-home order!  I know.  I have great timing).  I wanted a new career that is technical, creative, fast moving and ever changing.  I discovered that software engineering can fulfill all this and bring me back to my engineering root.  So I dive right into it and found it very fulfilling.</p>
-            <h5>background-position: </h5>
-                <p>I am goal-oriented, proactive full stack software developer.  I have experience managing people, building user focused tools, and improving efficiency.  Along with empathy, I leverage my analytical skills and cross-functional collaboration experiences to build innovative, intuitive applications/solutions. My goal is to provide users with positive experiences that make their lives easier.</p>
+            <h2>.about {</h2>
+            <div class="sub-container">
+                <h5>background-image:</h5>
+                <div class="wrap">
+                    <img src="./images/Tony.JPG" alt="My photo">
+                </div>
+                <h5>background-color:</h5>
+                <div class="wrap">
+                    <p>I was train as a nuclear engineer but never worked as one.  Leveraging my analytical skills and cheerful, empathetic personality, I built a nice career in the field of financial reporting and analysis.</p>
+                </div>
+                <h5>transition:</h5>
+                <div class="wrap">
+                    <p>After years in the field, I decided to leave it all behind and start a new career in February 2020 (right before pandemic stay-at-home order!  I know.  I have great timing.).  I wanted a new career that is technical, creative, fast moving and ever changing.  I discovered that software engineering can fulfill all this and bring me back to my engineering root.  So I dive right into it and found it very fulfilling.</p>
+                </div>
+                <h5>background-position: </h5>
+                <div class="wrap">
+                    <p>I am goal-oriented, proactive full stack software developer.  I have experience managing people, building user focused tools, and improving efficiency.  Along with empathy, I leverage my analytical skills and cross-functional collaboration experiences to build innovative, intuitive applications/solutions. My goal is to provide users with positive experiences that make their lives easier.</p>
+                </div>
+            </div>
+            <h2>}</h2>
         </section>
 
         <section id="portfolio" class="container">
-            <h2>PORTFOLIO</h2>
-            <div class="project-card">
-                <a href="">
-                    <h5>align-self: </h5><h4>Project React Jamming</h4>
-                    <div class="proj-desc">
-                        <img class="proj-img1" src="" alt="Project image1">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
-                    </div> 
-                </a>
+            <h2>.portfoliio {</h2>
+            <div class="sub-container">
+                <div class="project wrap">
+                    <a href="">
+                        <h5>align-self: </h5><h4>Project React Jamming</h4>
+                        <div class="proj-desc">
+                            <img class="proj-img1" src="./images/First-React.png" alt="Project image1">
+                            <p>******** Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea? *******</p>
+                        </div> 
+                    </a>
+                </div>
+                <div class="project wrap">
+                    <a href="">
+                        <h5>align-self: </h5><h4>Plum & Pear Website</h4>
+                        <div class="proj-desc">
+                            <img class="proj-img2" src="./images/PlumPear.png" alt="Project image2">
+                            <p>******* Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sit magnam! Nemo sint vero error officia eum! Corporis, adipisci. Amet incidunt pariatur consectetur at repudiandae minima eum repellendus, explicabo labore!Soluta ducimus doloremque repellendus dolorem reprehenderit quia suscipit itaque accusamus quaerat commodi totam, at dolore quae laborum. Enim, amet voluptates totam ab, consectetur hic in voluptatibus est aliquid quaerat eum! *****</p>
+                        </div> 
+                    </a>
+                </div>
+                <div class="project wrap">
+                    <a href="">
+                        <h5>justify-content: </h5><h4>90's Tamagotchi Game</h4>
+                        <div class="proj-desc">
+                            <img class="proj-img3" src="./images/tamagotchi-night.png" alt="Project image3">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora incidunt porro nihil ea, culpa asperiores vitae eaque ipsam consequuntur possimus fuga natus quis laborum qui blanditiis ullam accusamus obcaecati corporis dicta illum nesciunt. Quasi nesciunt quaerat, illo sapiente eligendi minima.</p>
+                        </div> 
+                    </a>
+                </div>
+                <div class="project wrap">
+                    <a href="">
+                        <h5>flex: </h5><h4>Full Stack Inventory Management App</h4>
+                        <div class="proj-desc">
+                            <img class="proj-img4" src="./images/cello-inv-mngt-app.png" alt="Project image4">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                        </div> 
+                    </a>
+                </div>
+                <div class="project wrap">
+                    <a href="">
+                        <h5>flex-wrap: </h5><h4>24-hr Sprint, Team Project</h4>
+                        <div class="proj-desc">
+                            <img class="proj-img5" src="./images/Skin-care-prod.png" alt="Project image5">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                        </div> 
+                    </a>
+                </div>
+                <div class="project wrap">
+                    <a href="">
+                        <h5>flex-grow: </h5><h4>Full Stack Django Travel Blog Site</h4>
+                        <div class="proj-desc">
+                            <img class="proj-img6" src="./images/Wayfayer.png" alt="Project image6">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                        </div> 
+                    </a>
+                </div>
+                <div class="project wrap">
+                    <a href="">
+                        <h5>height: </h5><h4>Project React</h4>
+                        <div class="proj-desc">
+                            <img class="proj-img7" src="" alt="Project image7">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                        </div> 
+                    </a>
+                </div>
             </div>
-            <div class="project-card">
-                <a href="">
-                    <h5>align-self: </h5><h4>Project Plum & Pear</h4>
-                    <div class="proj-desc">
-                        <img class="proj-img2" src="" alt="Project image2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sit magnam! Nemo sint vero error officia eum! Corporis, adipisci. Amet incidunt pariatur consectetur at repudiandae minima eum repellendus, explicabo labore!Soluta ducimus doloremque repellendus dolorem reprehenderit quia suscipit itaque accusamus quaerat commodi totam, at dolore quae laborum. Enim, amet voluptates totam ab, consectetur hic in voluptatibus est aliquid quaerat eum!</p>
-                    </div> 
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="">
-                    <img class="proj-img1" src="" alt="Project image3">
-                    
-                    <div class="proj-desc">
-                        <h4>Project Name3</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora incidunt porro nihil ea, culpa asperiores vitae eaque ipsam consequuntur possimus fuga natus quis laborum qui blanditiis ullam accusamus obcaecati corporis dicta illum nesciunt. Quasi nesciunt quaerat, illo sapiente eligendi minima.</p>
-                    </div> 
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="">
-                    <img class="proj-img1" src="" alt="Project image4">
-                    
-                    <div class="proj-desc">
-                        <h4>Project Name4</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
-                    </div> 
-                </a>
-            </div>
+            <h2>}</h2>
         </section>
         <section id="contact" class="container">
-            <h2>CONTACT</h2>
-            <a href="emailto:xtonyyu@gmail.com">
-                <i><i class="fas fa-envelope-square fa-2x"><p>Email: xtonyyu@gmail.com</p></i>
-            </a>
-
-            <a href="https://github.com/xTonyYu">
-                <i class="fab fa-github-square fa-2x"><p>Github: https://github.com/xTonyYu</p></i>
-            </a>
-            <a href="https://www.linkedin.com/in/xtonyyu/">
-                <i class="fab fa-linkedin fa-2x">      <p>LinkedIn: https://www.linkedin.com/in/xtonyyu/</p></i>
-            </a>
+            <h2>.contact {</h2>
+            <div class="sub-container">
+                <div class="wrap">
+                    <a href="emailto:xtonyyu@gmail.com">
+                        <i class="fas fa-envelope-square fa-2x"></i><p>Email: xtonyyu@gmail.com</p>
+                    </a>
+                </div>
+                <div class="wrap">
+                    <a href="https://github.com/xTonyYu">
+                        <i class="fab fa-github-square fa-2x"></i><p>Github: github.com/xTonyYu</p>
+                    </a>
+                </div>
+                <div class="wrap">
+                    <a href="https://www.linkedin.com/in/xtonyyu/">
+                        <i class="fab fa-linkedin fa-2x"></i><p>LinkedIn: www.linkedin.com/in/xtonyyu/</p>
+                    </a>
+                </div>
+            </div>
+            <h2>}</h2>
         </section>
     </body>
     

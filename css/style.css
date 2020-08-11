@@ -8,37 +8,57 @@
     box-sizing: border-box;
     color: white;
 }
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
 
 main {
+    padding-top: 50px;
     background-color: rgb(24, 25, 29);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+h2 {
+    color: rgb(220,185,116);
+}
 h3 {
     margin: 15px auto;
 }    
-h4, h5 {
-    display: inline;
-}
 h5 {
+    font-size: 16px;
     color: rgb(136,219,255);
+    margin-bottom: 16px;
 }
-p {
+p{
+    margin: 16px 0 0;
+}
+p,
+.project,
+.proj-desc {
     width: 100%;
 }
+.wrap {
+    margin-bottom: 30px;
+}
 
-.front-page h1 {
-    /* color: magenta; */
-    color: rgb(0, 255, 255);
-    font-size: 4rem;
+img {
+    width: 50%;
+    min-width: 250px;
 }
 
 .container {
     width: 85vw;
     min-width: 250px;
-
+    max-width: 800px;
+    padding-top: 70px;
+}
+.sub-container {
+    width: 100%;
+    padding: 0 40px;
 }
 
 /* hero */
@@ -55,10 +75,83 @@ p {
     margin: 20px;
     text-align: center;
 }
+.front-page h1 {
+    color: rgb(0, 255, 255);
+    font-size: 4rem;
+}
+
 /* about-me */
 
+#about-me .sub-container .wrap:last-child,
+#portfolio .sub-container .wrap:last-child {
+    margin-bottom: 0;
+}
 
 /* portfolio */
 
+.project a {
+    text-decoration: none;
+}
+#portfolio h4, 
+#portfolio h5 {
+    display: inline;
+}
+#portfolio h4 {
+    color: rgb(211,139,112);
+}
+
+.proj-desc {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+#portfolio img {
+    max-width: 330px;
+    max-height: 250px;
+}
+#portfolio p {
+    width: 50%;
+    min-width: 250px;
+    padding-left: 15px;
+}
 
 /* contact */
+#contact p {
+    display: inline;
+    margin: 10px;
+}
+
+#contact .wrap {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width:750px) {
+    .sub-container {
+        padding: 0 10px;
+    }
+
+    #about-me .wrap {
+        display: flex;
+        justify-content: center;
+    }
+    #about-me p {
+        width: 95%;
+        min-width: 250px;
+    }
+
+    #portfolio img {
+        width: 95%;
+        max-width: 330px;
+    }
+    #portfolio p {
+        width: 100%;
+        min-width: 250px;
+    }
+}
