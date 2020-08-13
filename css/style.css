@@ -10,13 +10,19 @@
 }
 header {
     position: fixed;
-    width: 100vw;
+    /* width: 100vw; */
     z-index: 100;
+    color: white;
+}
+.navbar-dark,
+.bg-dark {
+    background-color: rgb(36, 36, 36) !important;
+
 }
 
 main {
-    padding-top: 50px;
-    background-color: rgb(24, 25, 29);
+    /* padding-top: 50px; */
+    background-color: rgb(36, 36, 36);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,27 +39,31 @@ h5 {
     color: rgb(136,219,255);
     margin-bottom: 16px;
 }
-p{
-    margin: 16px 0 0;
+p {
+    line-height: 1.6;
+    letter-spacing: 1px;
 }
+
 p,
 .project,
-.proj-desc {
+.proj-card {
     width: 100%;
 }
 .wrap {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 img {
-    width: 50%;
-    min-width: 250px;
+    /* width: 50%; */
+    width: auto;
+    height: auto;
+    /* min-width: 250px; */
 }
 
 .container {
-    width: 85vw;
+    width: 90vw;
     min-width: 250px;
-    max-width: 800px;
+    max-width: 900px;
     padding-top: 70px;
 }
 .sub-container {
@@ -64,16 +74,32 @@ img {
 /* hero */
 
 #hero {
-    height: 95vh;
-    /* background-color: rgb(53, 53, 53); */
-    background-color: rgb(24, 25, 29);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(36, 36, 36);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+#hero:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/nightsky.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
 }
 .front-page {
     margin: 20px;
     text-align: center;
+    z-index: 50;
 }
 .front-page h1 {
     color: rgb(0, 255, 255);
@@ -81,6 +107,17 @@ img {
 }
 
 /* about-me */
+
+#about-me p {
+    margin: 16px 0 0;
+}
+
+#SQL-icon {
+    background-color: white;
+    min-width: 28px;
+    width: 28px;
+    height: 28px;
+}
 
 #about-me .sub-container .wrap:last-child,
 #portfolio .sub-container .wrap:last-child {
@@ -93,28 +130,64 @@ img {
     text-decoration: none;
 }
 #portfolio h4, 
-#portfolio h5 {
+#portfolio h5,
+#portfolio span {
     display: inline;
+}
+#portfolio span {
+    color: rgb(136,219,255);
 }
 #portfolio h4 {
     color: rgb(211,139,112);
 }
+#portfolio p {
+    margin: 0;
+}
 
-.proj-desc {
+.proj-header {
+    display: flex;
+    justify-content: space-between;
+}
+.link {
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-right: 3%;
+    flex-wrap: wrap;
+}
+.link a {
+    margin-left: 10px;
+}
+
+.proj-card {
     margin-top: 16px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
+
 #portfolio img {
     max-width: 330px;
     max-height: 250px;
+    margin-bottom: 15px;
 }
-#portfolio p {
+
+.proj-desc {
+    padding-left: 15px;
     width: 50%;
     min-width: 250px;
-    padding-left: 15px;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+li {
+    list-style: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    color: rgb(211,139,112);
 }
 
 /* contact */
@@ -142,16 +215,25 @@ img {
         justify-content: center;
     }
     #about-me p {
-        width: 95%;
+        width: 97%;
         min-width: 250px;
     }
 
+    .link {
+        margin-right: 0;
+    }
+
     #portfolio img {
-        width: 95%;
+        width: 97%;
         max-width: 330px;
     }
     #portfolio p {
         width: 100%;
+        min-width: 250px;
+    }
+    .proj-desc {
+        padding-left: 0px;
+        width: 97%;
         min-width: 250px;
     }
 }

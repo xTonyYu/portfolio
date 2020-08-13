@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <!-- <script defer src="https://kit.fontawesome.com/ae6121708a.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/portfolio.js"></script>
     <script defer src="js/app.js"></script>
     <title>Tony's Portfolio</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <a class="navbar-brand" href="">xTonyYu</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,16 +26,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#hero">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#hero">.home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#about-me">About <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#about-me">.about <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#portfolio">Portfolio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#portfolio">.portfolio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#contact">Contact <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#contact">.contact <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -42,12 +43,12 @@
     </header>
 
     <main>
-        <section id="hero" class="container">
+        <section id="hero">
             <div class="front-page">
                 <h3>Hello, I'm </h3>
                 <h1>Tony Yu</h1>
                 <h3>I'm a Full Stack Developer</h3>
-                <h3>I help make things work</h3>
+                <h3>I love building things</h3>
             </div>
         </section>
 
@@ -70,73 +71,41 @@
                 <div class="wrap">
                     <p>I am goal-oriented, proactive full stack software developer.  I have experience managing people, building user focused tools, and improving efficiency.  Along with empathy, I leverage my analytical skills and cross-functional collaboration experiences to build innovative, intuitive applications/solutions. My goal is to provide users with positive experiences that make their lives easier.</p>
                 </div>
+                <h5>align-items: </h5>
+                <div class="wrap">
+                    <p>Technologies I've worked with... <i class="fab fa-js-square fa-2x"></i> JavaScript (ES6), <i class="fab fa-python fa-2x"></i> Python, <img src="./images/SQL.png" alt="SQL image" id="SQL-icon"> SQL, <i class="fab fa-html5 fa-2x"></i> HTML, <i class="fab fa-css3-alt fa-2x"></i> CSS, jQuery, <i class="fab fa-node fa-2x"></i> Node.js, Express.js, <i class="fab fa-react fa-2x"></i> React, MongoDB, Mongoose, Django, <i class="fab fa-vuejs fa-2x"></i> Vue.js, <i class="fab fa-angular fa-2x"></i> AngularJS, <i class="fab fa-bootstrap fa-2x"></i> Bootstrap, APIs</p>
+                </div>
             </div>
             <h2>}</h2>
         </section>
 
         <section id="portfolio" class="container">
             <h2>.portfoliio {</h2>
-            <div class="sub-container">
+            <div class="sub-container project-list">
                 <div class="project wrap">
                     <a href="">
-                        <h5>align-self: </h5><h4>Project React Jamming</h4>
-                        <div class="proj-desc">
-                            <img class="proj-img1" src="./images/First-React.png" alt="Project image1">
-                            <p>******** Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea? *******</p>
-                        </div> 
-                    </a>
-                </div>
-                <div class="project wrap">
-                    <a href="">
-                        <h5>align-self: </h5><h4>Plum & Pear Website</h4>
-                        <div class="proj-desc">
-                            <img class="proj-img2" src="./images/PlumPear.png" alt="Project image2">
-                            <p>******* Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sit magnam! Nemo sint vero error officia eum! Corporis, adipisci. Amet incidunt pariatur consectetur at repudiandae minima eum repellendus, explicabo labore!Soluta ducimus doloremque repellendus dolorem reprehenderit quia suscipit itaque accusamus quaerat commodi totam, at dolore quae laborum. Enim, amet voluptates totam ab, consectetur hic in voluptatibus est aliquid quaerat eum! *****</p>
-                        </div> 
-                    </a>
-                </div>
-                <div class="project wrap">
-                    <a href="">
-                        <h5>justify-content: </h5><h4>90's Tamagotchi Game</h4>
-                        <div class="proj-desc">
-                            <img class="proj-img3" src="./images/tamagotchi-night.png" alt="Project image3">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora incidunt porro nihil ea, culpa asperiores vitae eaque ipsam consequuntur possimus fuga natus quis laborum qui blanditiis ullam accusamus obcaecati corporis dicta illum nesciunt. Quasi nesciunt quaerat, illo sapiente eligendi minima.</p>
-                        </div> 
-                    </a>
-                </div>
-                <div class="project wrap">
-                    <a href="">
-                        <h5>flex: </h5><h4>Full Stack Inventory Management App</h4>
-                        <div class="proj-desc">
+                        <h5>****** flex: </h5><h4>Full Stack Inventory Management App</h4>
+                        <div class="proj-card">
                             <img class="proj-img4" src="./images/cello-inv-mngt-app.png" alt="Project image4">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                            <p>Created a full stack inventory management app in and collaborated with another developer.  The app included login authentication feature, dashboard, product category index page, product detail page.  It has the ability to create, read, update and delete products using RESTful routes while keeping the code DRY.</p>
                         </div> 
                     </a>
                 </div>
                 <div class="project wrap">
                     <a href="">
-                        <h5>flex-wrap: </h5><h4>24-hr Sprint, Team Project</h4>
-                        <div class="proj-desc">
+                        <h5>****** flex-wrap: </h5><h4>24-hr Sprint, Team Project</h4>
+                        <div class="proj-card">
                             <img class="proj-img5" src="./images/Skin-care-prod.png" alt="Project image5">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                            <p>Built a skin-care product review site in 24 hours by collaborating with 2 designers and 2 developers.  Applied Agile principles to pivot priorities and tasks as needed to deliver the site on time and per the project and design specifications.</p>
                         </div> 
                     </a>
                 </div>
                 <div class="project wrap">
                     <a href="">
-                        <h5>flex-grow: </h5><h4>Full Stack Django Travel Blog Site</h4>
-                        <div class="proj-desc">
+                        <h5>****** flex-grow: </h5><h4>Full Stack Django Travel Blog Site</h4>
+                        <div class="proj-card">
                             <img class="proj-img6" src="./images/Wayfayer.png" alt="Project image6">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
-                        </div> 
-                    </a>
-                </div>
-                <div class="project wrap">
-                    <a href="">
-                        <h5>height: </h5><h4>Project React</h4>
-                        <div class="proj-desc">
-                            <img class="proj-img7" src="" alt="Project image7">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea?</p>
+                            <p>A responsive full stack travel blog site with a team of four developers.  Gathered client input and clarification on requirements and wireframe; leveraged Trello to plan sprints, minimum requirement tasks, and extra features.  Functionality included full CRUD on blogs, login authentication, sign-up auto welcome email, and custom modals.</p>
                         </div> 
                     </a>
                 </div>
