@@ -6,7 +6,7 @@ const portfolio = [
         github: '',
         img: './images/First-React.png',
         skillsApplied: ['React', 'JavaScript', 'Spotify Web API'],
-        desc: 'Personal project (May 2020): A site that provides potential career information for UX designers, developers, and product mangers.  Main challenges included creating a responsive carousel with cards of various widths and resizable based on viewport width and a search box with type-ahead-suggestion.******** Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea? *******'
+        desc: ' ******** Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea? *******'
     },
     {
         css: 'align-self',
@@ -34,5 +34,23 @@ const portfolio = [
         img: './images/cello-inv-mngt-app.png',
         skillsApplied: ['Express', 'Node.js', 'Mongoose', 'EJS', 'Bootstrap'],
         desc: 'Created a full stack inventory management app in and collaborated with another developer.  The app included login authentication feature, dashboard, product category index page, product detail page.  It has the ability to create, read, update and delete products using RESTful routes while keeping the code DRY.'
+    },
+    {
+        css: 'flex-wrap',
+        title: "24-hr Sprint, Team Project",
+        link: 'https://arcane-plains-74508.herokuapp.com/show',
+        github: 'https://github.com/xTonyYu/Skin-Care-Prod',
+        img: './images/Skin-care-prod.png',
+        skillsApplied: ['Express', 'Node.js', 'Mongoose', 'Bootstrap', 'Time Management', 'Collaboration'],
+        desc: 'Built a skin-care product review site in 24 hours by collaborating with 2 designers and 2 developers.  Applied Agile principles to pivot priorities and tasks as needed to deliver the site on time and per the project and design specifications.'
+    },
+    {
+        css: 'flex-grow',
+        title: "Full Stack Django Travel Blog Site",
+        link: 'https://wayfayer2020.herokuapp.com/',
+        github: 'https://github.com/xTonyYu/Wayfayer',
+        img: './images/Wayfayer.png',
+        skillsApplied: ['Django', 'Python', 'PostgreSQL', 'JavaScript', 'Project planning'],
+        desc: 'A responsive full stack travel blog site with a team of four developers.  Gathered client input and clarification on requirements and wireframe; leveraged Trello to plan sprints, minimum requirement tasks, and extra features.  Functionality included full CRUD on blogs, login authentication, sign-up auto welcome email, and custom modals.'
     },
 ]

@@ -9,11 +9,8 @@ $(document).on('click', 'a[href^="#"]', function(e) {
     }, 500);
 });
 
-const proj = portfolio[0]
-console.log(proj)
 
-const portfolioContentHtml = portfolio.map(proj => {
-    
+const portfolioContentHtml = portfolio.map(proj => {    
     const html1 = `
     <div class="project wrap">
     <div class="proj-header">
@@ -22,11 +19,11 @@ const portfolioContentHtml = portfolio.map(proj => {
         </a>
         <div class="link">
             <a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
-            <a href="${proj.link}" target="_blank"><i class="fas fa-external-link-square-alt fa-2x"></a></i></a>
+            <a href="${proj.link}" target="_blank"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
         </div>
     </div>
         <div class="proj-card">
-            <img class="proj-img" src="${proj.img}" alt="Project image">
+        <a href="${proj.link}" target="_blank" class="proj-img-link"><img class="proj-img" src="${proj.img}" alt="Project image"></a>
             <div class="proj-desc">
                 <ul class="highlight">
     `
