@@ -1,3 +1,10 @@
+:root {
+    --stroke-width: 6;
+    --calm-blue:rgb(136,219,255);
+    --calm-yellow:rgb(220,185,116);
+    --calm-coral:rgb(211,139,112);
+}
+
 * {
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Oxygen', sans-serif;
@@ -8,17 +15,93 @@
     box-sizing: border-box;
     color: white;
 }
+
+/* Header */
+
 header {
     position: fixed;
     /* width: 100vw; */
+    top: 10px;
     z-index: 100;
     color: white;
 }
 .navbar-dark,
 .bg-dark {
-    background-color: rgb(36, 36, 36) !important;
-
+    /* background-color: rgb(36, 36, 36) !important; */
+    background-color: black !important;
 }
+
+.navbar {
+    /* height: 56px; */
+    min-height: 56px;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0) !important;
+}
+
+button:focus {
+    outline-color: transparent;
+    outline: 1px solid transparent;
+}
+
+.navbar-nav .nav-item > a{
+    transition: ease-in-out 0.2s
+}
+.navbar-nav .nav-item:hover > a{
+    Border-bottom: 2px solid var(--calm-yellow) ;
+    /* padding-left: 30px; */
+    padding-top: 14px;
+    padding-bottom: 0px;
+}
+
+/*  Hamburger menu by Chris Coyier https://css-tricks.com/line-animated-hamburger-menu/*/
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+  }
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-width: var(--stroke-width);
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: var(--stroke-width);
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: var(--stroke-width);
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: var(--stroke-width);
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: var(--stroke-width);
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: var(--stroke-width);
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: var(--stroke-width);
+  }
+
+/*  */
+
+/* Main */
 
 main {
     /* padding-top: 50px; */
@@ -29,14 +112,14 @@ main {
 }
 
 h2 {
-    color: rgb(220,185,116);
+    color: var(--calm-yellow);
 }
 h3 {
     margin: 15px auto;
 }    
 h5 {
     font-size: 16px;
-    color: rgb(136,219,255);
+    color: var(--calm-blue);
     margin-bottom: 16px;
 }
 p {
@@ -54,14 +137,14 @@ p,
 }
 
 .container {
-    width: 90vw;
+    width: 85vw;
     min-width: 250px;
     max-width: 950px;
     padding-top: 70px;
 }
 .sub-container {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 25px;
 }
 
 /* hero */
@@ -102,6 +185,10 @@ p,
 
 /* about-me */
 
+
+.img-of-me {
+    filter: drop-shadow(15px 15px 10px black);
+}
 #about-me p {
     margin: 16px 0 0;
 }
@@ -129,10 +216,10 @@ p,
     display: inline;
 }
 #portfolio span {
-    color: rgb(136,219,255);
+    color: var(--calm-blue);
 }
 #portfolio h4 {
-    color: rgb(211,139,112);
+    color: var(--calm-coral);
 }
 #portfolio p {
     margin: 0;
@@ -151,6 +238,18 @@ p,
 .link a {
     margin-left: 10px;
 }
+.proj-header a > * ,
+.link a > * {
+    transition: ease-in-out 0.2s;
+}
+.proj-header a > *:hover{
+    color: var(--calm-blue);
+    filter: saturate(200%) drop-shadow(10px 10px 3px rgb(0, 0, 0));
+}
+.link a > *:hover {
+    color: var(--calm-blue);
+    filter: drop-shadow(10px 10px 3px rgb(0, 0, 0));
+}
 
 .proj-card {
     margin-top: 16px;
@@ -168,6 +267,11 @@ p,
 .proj-img {
     width: 100%;
     object-fit: contain;
+    filter: sepia(100%) hue-rotate(150deg) brightness(0.7);
+    transition: ease-in-out 0.2s;
+}
+.proj-img:hover {
+    filter: sepia(0%) hue-rotate(0) brightness(1) drop-shadow(15px 15px 10px black) contrast(115%);
 }
 
 .proj-desc {
@@ -178,30 +282,59 @@ p,
 
 ul {
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     flex-wrap: wrap;
+    /* align-items: center; */
 }
+em,
 li {
     list-style: none;
     font-size: 13px;
     letter-spacing: 1px;
     padding-left: 10px;
-    color: rgb(211,139,112);
+    color: var(--calm-coral);
 }
 
+
 /* contact */
-#contact p {
-    display: inline;
-    margin: 10px;
+#contact {
+    margin-bottom: 100px;
+}
+#contact .sub-container {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
 }
 
 #contact .wrap {
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 #contact a {
-    display: flex;
-    align-items: center;
+    text-decoration: none;
+    filter: hue-rotate(0deg);
+    color: white;
+    transition: ease-in-out 0.2s;
+    /* position: relative; */
+}
+
+#contact a p:hover,
+#contact a:hover {
+    color: var(--calm-blue);
+    filter: drop-shadow(10px 10px 5px black);
+}
+
+#contact a i,
+#contact a p {
+    color: inherit;
+    vertical-align: middle;
+    transition: ease-in-out 0.2s;
+}
+#contact a p {
+    display: inline;
+    margin: 10px;
+    width: inherit;
 }
 
 @media only screen and (max-width:750px) {
@@ -234,5 +367,24 @@ li {
         padding-left: 0px;
         width: 97%;
         min-width: 250px;
+    }
+}
+
+/* navbar */
+@media (max-width: 991px) {
+    .navbar-expand-lg {
+        width: 180px
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-expand-sm {
+        width: 180px
+    }
+    .navbar-nav .nav-item:hover > a{
+        Border-bottom: transparent ;
+        Border-left: 3px solid var(--calm-yellow) ;
+        /* padding-left: 30px; */
+        padding: 8px 10px;
     }
 }

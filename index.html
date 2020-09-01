@@ -18,9 +18,16 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="">xTonyYu</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#contact"><img src="./images/Logo.svg" alt=""></a>
+            <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="this.classList.toggle('opened')">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <!-- <button class="" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu"> -->
+                    <svg width="30" height="30" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                <!-- </button> -->
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,7 +64,7 @@
             <div class="sub-container">
                 <h5>background-image:</h5>
                 <div class="wrap">
-                    <img src="./images/Tony.JPG" alt="My photo">
+                    <img src="./images/Tony.JPG" class="img-of-me" alt="My photo">
                 </div>
                 <h5>background-color:</h5>
                 <div class="wrap">
@@ -73,7 +80,7 @@
                 </div>
                 <h5>align-items: </h5>
                 <div class="wrap">
-                    <p>Technologies I've worked with... <i class="fab fa-js-square fa-2x"></i> JavaScript (ES6), <i class="fab fa-python fa-2x"></i> Python, <img src="./images/SQL.png" alt="SQL image" id="SQL-icon"> SQL, <i class="fab fa-html5 fa-2x"></i> HTML, <i class="fab fa-css3-alt fa-2x"></i> CSS, jQuery, <i class="fab fa-node fa-2x"></i> Node.js, Express.js, <i class="fab fa-react fa-2x"></i> React, MongoDB, Mongoose, Django, <i class="fab fa-vuejs fa-2x"></i> Vue.js, <i class="fab fa-angular fa-2x"></i> AngularJS, <i class="fab fa-bootstrap fa-2x"></i> Bootstrap, APIs</p>
+                    <p>Technologies I've worked with... <i class="fab fa-js-square fa-2x"> JavaScript (ES6)</i>, <i class="fab fa-python fa-2x"></i> Python, <img src="./images/SQL.png" alt="SQL image" id="SQL-icon"> SQL, <i class="fab fa-html5 fa-2x"></i> HTML, <i class="fab fa-css3-alt fa-2x"></i> CSS, jQuery, <i class="fab fa-node fa-2x"></i> Node.js, Express, <i class="fab fa-react fa-2x"></i> React, MongoDB, Mongoose, Django, <i class="fab fa-bootstrap fa-2x"></i> Bootstrap, <i class="fab fa-vuejs fa-2x"></i> Vue.js, <i class="fab fa-angular fa-2x"></i> AngularJS</p>
                 </div>
             </div>
             <h2>}</h2>
@@ -88,17 +95,17 @@
             <h2>.contact {</h2>
             <div class="sub-container">
                 <div class="wrap">
-                    <a href="emailto:xtonyyu@gmail.com">
+                    <a href="mailto:xtonyyu@gmail.com">
                         <i class="fas fa-envelope-square fa-2x"></i><p>Email: xtonyyu@gmail.com</p>
                     </a>
                 </div>
                 <div class="wrap">
-                    <a href="https://github.com/xTonyYu">
+                    <a href="https://github.com/xTonyYu" target="_blank">
                         <i class="fab fa-github-square fa-2x"></i><p>Github: github.com/xTonyYu</p>
                     </a>
                 </div>
                 <div class="wrap">
-                    <a href="https://www.linkedin.com/in/xtonyyu/">
+                    <a href="https://www.linkedin.com/in/xtonyyu/" target="_blank">
                         <i class="fab fa-linkedin fa-2x"></i><p>LinkedIn: www.linkedin.com/in/xtonyyu/</p>
                     </a>
                 </div>
@@ -107,8 +114,5 @@
         </section>
     </body>
     
-    <footer>
-
-    </footer>
 </body>
 </html>

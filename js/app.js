@@ -9,12 +9,18 @@ $(document).on('click', 'a[href^="#"]', function(e) {
     }, 500);
 });
 
+$(document).ready(function(){
+	$('#nav-icon, #nav-icon1, nav-icon2').click(function(){
+		$(this).toggleClass('open');
+	});
+});
 
-const portfolioContentHtml = portfolio.map(proj => {    
+const portfolioContentHtml = portfolio.map((proj, i) => {    
+    if (i > 0) {
     const html1 = `
     <div class="project wrap">
     <div class="proj-header">
-        <a href="${proj.link}">
+        <a href="${proj.link}" target="_blank">
             <h4><span>${proj.css}: </span>${proj.title}</h4>
         </a>
         <div class="link">
@@ -40,6 +46,7 @@ const portfolioContentHtml = portfolio.map(proj => {
     </div>
     `
     return html1 + html2 + html3
+    }
 }).join('')
 
 $('.project-list').append(portfolioContentHtml)
