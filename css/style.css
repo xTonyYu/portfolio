@@ -33,7 +33,7 @@ header {
 
 .navbar {
     /* height: 56px; */
-    min-height: 56px;
+    min-height: 57px;
 }
 
 .navbar-toggler {
@@ -48,10 +48,14 @@ button:focus {
 .navbar-nav .nav-item > a{
     transition: ease-in-out 0.2s
 }
+.nav-item {
+    box-sizing: content-box;
+    height: 41px;
+}
 .navbar-nav .nav-item:hover > a{
     Border-bottom: 2px solid var(--calm-yellow) ;
     /* padding-left: 30px; */
-    padding-top: 14px;
+    padding-top: 13px;
     padding-bottom: 0px;
 }
 
@@ -152,9 +156,9 @@ p,
 #hero {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(3, 13, 28);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
 }
@@ -165,22 +169,42 @@ p,
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/nightsky.jpg');
+    /* background-image: url('../images/nightsky.jpg'); */
+    background-image: url('../images/jsdom.jpeg');
+    filter: brightness(0.6) blur(2px) ;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.1;
     z-index: 1;
 }
 
 .front-page {
     margin: 20px;
-    text-align: center;
+    margin-left: 20vw;
+    text-align: left;
     z-index: 50;
 }
 .front-page h1 {
     color: rgb(0, 255, 255);
-    font-size: 4rem;
+    font-size: 48px;
+    letter-spacing: 3.15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.front-page h2 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2.6px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.front-page h3 {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    line-height: 30px;
+    margin: 0;
 }
 
 /* about-me */
@@ -192,12 +216,48 @@ p,
 #about-me p {
     margin: 16px 0 0;
 }
+#about-me .wrap div {
+    display: inline-block;
+    margin: 3px 5px;
+}
 
-#SQL-icon {
+.icon {
     background-color: white;
+    background-size: contain;
+    display: inline-block;
     min-width: 28px;
     width: 28px;
     height: 28px;
+}
+#SQL {
+    background-image: url("../images/sql.png");
+}
+#jquery {
+    background-image: url("../images/jquery-icon-png-25.jpg");
+}
+#express {
+    background-image: url("../images/express.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 20px;
+}
+#mongodb {
+    background-image: url("../images/mongodb.jpg");
+}
+#mongoose {
+    background-image: url("../images/mongoose.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 20px;
+}
+#django {
+    background-image: url("../images/django.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 20px;
 }
 
 #about-me .sub-container .wrap:last-child,
@@ -349,6 +409,11 @@ li {
     #about-me p {
         width: 97%;
         min-width: 250px;
+    }
+
+    #about-me .sub-container .wrap:last-child {
+        display: inline-block;
+        /* margin: 3px 5px; */
     }
 
     .link {
