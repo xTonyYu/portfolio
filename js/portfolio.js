@@ -1,15 +1,6 @@
 const portfolio = [
     {
         css: 'align-self',
-        title: 'Project React Jamming',
-        link: '',
-        github: '',
-        img: './images/First-React.png',
-        skillsApplied: ['React', 'JavaScript', 'Spotify Web API'],
-        desc: ' ******** Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reprehenderit odio reiciendis placeat earum inventore cupiditate accusamus delectus obcaecati ea? *******'
-    },
-    {
-        css: 'align-self',
         title: 'Plum & Pear Website',
         link: 'https://xtonyyu.github.io/website-with-custom-carousel/detail.html',
         github: 'https://github.com/xTonyYu/website-with-custom-carousel',

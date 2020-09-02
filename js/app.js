@@ -1,7 +1,6 @@
 console.log("Tony's portfolio")
 
 
-
 $(document).on('click', 'a[href^="#"]', function(e) {
     e.preventDefault();
     $('html, body').animate({
@@ -16,7 +15,6 @@ $(document).ready(function(){
 });
 
 const portfolioContentHtml = portfolio.map((proj, i) => {    
-    if (i > 0) {
     const html1 = `
     <div class="project wrap">
     <div class="proj-header">
@@ -46,7 +44,7 @@ const portfolioContentHtml = portfolio.map((proj, i) => {
     </div>
     `
     return html1 + html2 + html3
-    }
+    
 }).join('')
 
 $('.project-list').append(portfolioContentHtml)
