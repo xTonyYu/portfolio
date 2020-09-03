@@ -23,7 +23,7 @@ const portfolio = [
         link: 'https://safe-citadel-60970.herokuapp.com/login',
         github: 'https://github.com/xTonyYu/Cello-Inventory-App',
         img: './images/cello-inv-mngt-app.png',
-        skillsApplied: ['Express', 'Node.js', 'Mongoose', 'EJS', 'Bootstrap'],
+        skillsApplied: ['Express', 'Node.js', 'Mongoose', 'EJS', 'Bootstrap', 'Google Chart API'],
         desc: 'Created a full stack inventory management app in and collaborated with another developer.  The app included login authentication feature, dashboard, product category index page, product detail page.  It has the ability to create, read, update and delete products using RESTful routes while keeping the code DRY.'
     },
     {
@@ -41,7 +41,7 @@ const portfolio = [
         link: 'https://wayfayer2020.herokuapp.com/',
         github: 'https://github.com/xTonyYu/Wayfayer',
         img: './images/Wayfayer.png',
-        skillsApplied: ['Django', 'Python', 'PostgreSQL', 'JavaScript', 'Google Chart API', 'Project planning'],
+        skillsApplied: ['Django', 'Python', 'PostgreSQL', 'JavaScript', 'Project planning'],
         desc: 'A responsive full stack travel blog site with a team of four developers.  Gathered client input and clarification on requirements and wireframe; leveraged Trello to plan sprints, minimum requirement tasks, and extra features.  Functionality included full CRUD on blogs, login authentication, sign-up auto welcome email, and custom modals.'
     },
     {
