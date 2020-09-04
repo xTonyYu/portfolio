@@ -451,7 +451,7 @@ li {
 @media (max-width: 575px) {
     #hero:before {
     background-image: url('../images/long_code.jpg');
-    filter: brightness(0.4) blur(2px) opacity(50%);
+    filter: brightness(0.6) blur(2px) opacity(50%);
     background-attachment: fixed;
     background-position: left;
     background-size: contain;
