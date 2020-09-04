@@ -181,7 +181,10 @@ p,
     background-attachment: fixed;
     background-position: left;
     background-size: cover;
+<<<<<<< HEAD
     /* opacity: 1; */
+=======
+>>>>>>> master
     z-index: 1;
 }
 
@@ -450,11 +453,11 @@ li {
 
 @media (max-width: 575px) {
     #hero:before {
-    background-image: url('../images/long_code.jpg');
-    filter: brightness(0.6) blur(2px) opacity(50%);
-    background-attachment: fixed;
-    background-position: left;
-    background-size: contain;
+        background-image: url('../images/long_code.jpg');
+        filter: brightness(0.6) blur(2px) opacity(50%);
+        background-attachment: fixed;
+        background-position: left;
+        background-size: cover;
     }
 
     .navbar-expand-sm {
