@@ -177,11 +177,10 @@ p,
     width: 100%;
     height: 100%;
     background-image: url('../images/jsdom.jpeg');
-    filter: brightness(0.6) blur(2px) ;
+    filter: brightness(0.6) blur(2px) opacity(20%);
     background-attachment: fixed;
     background-position: left;
     background-size: cover;
-    opacity: 0.2;
     z-index: 1;
 }
 
@@ -449,6 +448,14 @@ li {
 }
 
 @media (max-width: 575px) {
+    #hero:before {
+        background-image: url('../images/long_code.jpg');
+        filter: brightness(0.6) blur(2px) opacity(50%);
+        background-attachment: fixed;
+        background-position: left;
+        background-size: contain;
+    }
+
     .navbar-expand-sm {
         width: 180px;
         padding: 8px 0 0 0;
