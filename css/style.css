@@ -179,9 +179,9 @@ p,
     background-image: url('../images/jsdom.jpeg');
     filter: brightness(0.6) blur(2px) ;
     background-attachment: fixed;
-    background-position: center;
+    background-position: left;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: 1;
 }
 
