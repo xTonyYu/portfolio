@@ -58,9 +58,11 @@ button:focus {
 
 .navbar-nav .nav-item > a{
     font-weight: 300;
+    color: white !important;
     transition: ease-in-out 0.2s;
 }
-.navbar-nav .nav-item:hover > a{
+.active,
+.navbar-nav .nav-item:hover > a {
     Border-bottom: 2px solid var(--calm-yellow) ;
     padding-top: 13px;
     padding-bottom: 0px;
@@ -181,10 +183,6 @@ p,
     background-attachment: fixed;
     background-position: left;
     background-size: cover;
-<<<<<<< HEAD
-    /* opacity: 1; */
-=======
->>>>>>> master
     z-index: 1;
 }
 
@@ -370,7 +368,7 @@ li {
 
 /* contact */
 #contact {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 #contact .sub-container {
     width: 100%;
@@ -457,7 +455,7 @@ li {
         filter: brightness(0.6) blur(2px) opacity(50%);
         background-attachment: fixed;
         background-position: left;
-        background-size: cover;
+        background-size: contain;
     }
 
     .navbar-expand-sm {
@@ -469,10 +467,10 @@ li {
         padding: 5px 0 13px 16px;
     }
 
+    .navbar-nav .nav-link.active,
     .navbar-nav .nav-item:hover > a{
         Border-bottom: transparent ;
         Border-left: 3px solid var(--calm-yellow) ;
-        /* padding-left: 30px; */
         padding: 8px 10px;
     }
 

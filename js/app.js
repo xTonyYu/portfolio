@@ -1,19 +1,66 @@
 console.log("Tony's portfolio")
 
-
+// navbar click then slide down to the section
 $(document).on('click', 'a[href^="#"]', function(e) {
     e.preventDefault();
+    if (this.innerText!== '') {
+        this.classList.add('active')
+    }
+    $('.navbar-toggler').toggleClass('opened')
+    $('.navbar-toggler').toggleClass('collapsed')
+    $('.navbar-toggler').attr('aria-expanded', function() {
+        return this.ariaExpanded ? false : true
+    } )
+    $('.navbar-collapse').toggleClass('show')
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
 
-$(document).ready(function(){
-	$('#nav-icon, #nav-icon1, nav-icon2').click(function(){
-		$(this).toggleClass('open');
-	});
-});
+// highlight nav item based on page position
+function debounce(func, wait = 100, immediate = false) {
+    let timeout;
+    return function() {
+        const context = this,
+            args = arguments;
+        const later = function() {
+            timeout = null;
+            if (!immediate) {
+                func.apply(context, args);
+            }
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) {
+            func.apply(context, args);
+        }
+    };
+}
 
+const sections = document.querySelectorAll('section')
+console.log("sections: ", sections)
+function highlightNavItem() {
+    sections.forEach(sec => {
+        const winBottom = window.scrollY + window.innerHeight
+        const sectionShowing = sec.offsetTop + window.innerHeight/4
+        const sectionBottom = sec.offsetTop + sec.offsetHeight + window.innerHeight/4
+        const highlightItem = winBottom >= sectionShowing
+        const sectionPassed = winBottom > sectionBottom
+        if (highlightItem && !sectionPassed) {
+            console.log("highlight nav item", sec.id)
+            console.log($(`#${sec.id}-link`))
+            $('.nav-link').removeClass('active')
+            if (sec.id !== 'hero') {
+                $(`#${sec.id}-link`).addClass('active')
+            }
+        }
+    })
+}
+
+$(window).on('scroll', debounce(highlightNavItem) )
+
+// creating portfolio section
 const portfolioContentHtml = portfolio.map((proj, i) => {    
     const html1 = `
     <div class="project wrap">
