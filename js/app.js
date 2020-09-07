@@ -70,7 +70,7 @@ const portfolioContentHtml = portfolio.map((proj, i) => {
         </a>
         <div class="link">
             <a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
-            <a href="${proj.link}" target="_blank"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
+            <a href="${proj.link}" target="_blank" class="ext-link"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
         </div>
     </div>
         <div class="proj-card">
