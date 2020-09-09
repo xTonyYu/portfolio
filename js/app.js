@@ -39,7 +39,6 @@ function debounce(func, wait = 100, immediate = false) {
 }
 
 const sections = document.querySelectorAll('section')
-console.log("sections: ", sections)
 function highlightNavItem() {
     sections.forEach(sec => {
         const winBottom = window.scrollY + window.innerHeight
@@ -48,8 +47,6 @@ function highlightNavItem() {
         const highlightItem = winBottom >= sectionShowing
         const sectionPassed = winBottom > sectionBottom
         if (highlightItem && !sectionPassed) {
-            console.log("highlight nav item", sec.id)
-            console.log($(`#${sec.id}-link`))
             $('.nav-link').removeClass('active')
             if (sec.id !== 'hero') {
                 $(`#${sec.id}-link`).addClass('active')

@@ -232,9 +232,11 @@ p,
 .icon {
     background-color: white;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: inline-block;
     min-width: 28px;
-    width: 28px;
+    /* width: 28px; */
     height: 28px;
 }
 #SQL {
@@ -245,8 +247,6 @@ p,
 }
 #express {
     background-image: url("../images/express.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     width: 40px;
     height: 20px;
 }
@@ -255,15 +255,11 @@ p,
 }
 #mongoose {
     background-image: url("../images/mongoose.png");
-    background-repeat: no-repeat;
-    background-position: center;
     width: 40px;
     height: 20px;
 }
 #django {
     background-image: url("../images/django.png");
-    background-repeat: no-repeat;
-    background-position: center;
     width: 40px;
     height: 20px;
 }
