@@ -1,5 +1,11 @@
 console.log("Tony's portfolio")
 
+// navbar toggler click event
+$('.navbar-toggler').on('click', function() {
+    this.classList.toggle('opened')    
+    $('.navbar').toggleClass('border-radius-LL')
+})
+
 // navbar click then slide down to the section
 $(document).on('click', 'a[href^="#"]', function(e) {
     e.preventDefault();

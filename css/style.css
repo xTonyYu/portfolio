@@ -30,6 +30,8 @@ header {
 .navbar {
     height: 56px;
     padding: 0 0 0 1rem;
+    border-radius: 0 10px 10px 0;
+    transition: all ease-in 0.5s;
 }
 .navbar-brand {
     margin-right: 20px;
@@ -45,7 +47,8 @@ button:focus {
 }
 
 .navbar-collapse {
-    background-color: rgb(42, 45, 46);
+    background-color: rgb(68, 82, 84);
+    border-radius: 0 10px 10px 0;
 }
 
 .nav-item {
@@ -220,6 +223,7 @@ p,
 
 .img-of-me {
     filter: drop-shadow(15px 15px 10px black);
+    border-radius: 10px;
 }
 #about-me p {
     margin: 16px 0 0;
@@ -341,6 +345,7 @@ p,
     object-fit: contain;
     filter: sepia(100%) hue-rotate(150deg) brightness(0.7);
     transition: ease-in-out 0.2s;
+    border-radius: 10px;
 }
 .proj-img:hover {
     filter: sepia(0%) hue-rotate(0) brightness(1) drop-shadow(15px 15px 10px rgb(99, 99, 99)) contrast(115%);
@@ -462,9 +467,18 @@ li {
         width: 280px;
         padding: 8px 0 0 0;
     }
+    
+    .border-radius-LL {
+        border-radius: 0 10px 0 0;
+        transition: all linear 0s;
+    }
 
     .navbar-brand {
         padding: 5px 0 13px 16px;
+    }
+
+    .navbar-collapse {
+        border-radius: 0 0 10px 0;
     }
 
     .nav-item {
