@@ -166,7 +166,7 @@ p,
 #hero {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(3, 13, 28);
+    background-color: rgb(7, 30, 65);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -180,7 +180,7 @@ p,
     width: 100%;
     height: 100%;
     background-image: url('../images/jsdom.jpeg');
-    filter: brightness(0.6) blur(2px) opacity(20%);
+    filter: brightness(0.8) blur(2px) opacity(20%);
     background-attachment: fixed;
     background-position: left;
     background-size: cover;
@@ -272,7 +272,7 @@ p,
 /* portfolio */
 
 #portfolio {
-    background-color: rgba(5, 16, 31, 0.75);
+    background-color: rgb(9, 33, 60);
 }
 
 .project a {
@@ -313,11 +313,11 @@ p,
 }
 .proj-header a > *:hover{
     color: var(--calm-blue);
-    filter: saturate(200%) drop-shadow(10px 10px 4px rgb(55, 55, 55));
+    filter: saturate(200%) drop-shadow(10px 10px 4px rgb(99, 99, 99));
 }
 .link a > *:hover {
     color: var(--calm-blue);
-    filter: drop-shadow(10px 10px 4px rgb(55, 55, 55));
+    filter: drop-shadow(10px 10px 4px rgb(99, 99, 99));
 }
 .ext-link {
     z-index: 10;
@@ -343,7 +343,7 @@ p,
     transition: ease-in-out 0.2s;
 }
 .proj-img:hover {
-    filter: sepia(0%) hue-rotate(0) brightness(1) drop-shadow(15px 15px 10px rgb(55, 55, 55)) contrast(115%);
+    filter: sepia(0%) hue-rotate(0) brightness(1) drop-shadow(15px 15px 10px rgb(99, 99, 99)) contrast(115%);
 }
 
 .proj-desc {
@@ -452,7 +452,7 @@ li {
 @media (max-width: 575px) {
     #hero:before {
         background-image: url('../images/long_code.jpg');
-        filter: brightness(0.6) blur(2px) opacity(50%);
+        filter: brightness(0.8) blur(2px) opacity(30%);
         background-attachment: fixed;
         background-position: left;
         background-size: contain;
