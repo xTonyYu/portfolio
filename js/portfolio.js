@@ -15,7 +15,7 @@ const portfolio = [
         github: 'https://github.com/xTonyYu/Tamagotchi-Game',
         img: './images/tamagotchi-night.png',
         skillsApplied: ['JavaScript', 'jQuery', 'HTML/CSS', 'Responsive design'],
-        desc: 'A fast-pace online game inspired by 90’s Tamagotchi game.  The object of the game is to keep your Tamagotchi alive by feeding it, plying with it, and making sure it takes naps.  However, taking naps will slowly make Tamagotchi hungry and it can only be fed while it’s awake.'
+        desc: 'A fast-pace online game inspired by 90’s Tamagotchi game.  The object of the game is to keep your Tamagotchi alive by feeding it, playing with it, and making sure it takes naps.  However, taking naps will slowly make Tamagotchi hungry and it can only be fed while it’s awake.'
     },
     {
         css: 'flex',
