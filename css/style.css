@@ -189,6 +189,12 @@ p,
     background-size: cover;
     z-index: 1;
 }
+.linkedin-photo {
+    /* filter: drop-shadow(15px 15px 10px black); */
+    /* border-radius: 10px; */
+    width: 0;
+    float: right;
+}
 
 .front-page {
     margin: 20px;
