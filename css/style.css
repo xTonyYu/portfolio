@@ -190,8 +190,6 @@ p,
     z-index: 1;
 }
 .linkedin-photo {
-    /* filter: drop-shadow(15px 15px 10px black); */
-    /* border-radius: 10px; */
     width: 1px;
     float: right;
 }
