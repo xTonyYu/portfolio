@@ -65,19 +65,28 @@ $(window).on('scroll', debounce(highlightNavItem) )
 
 // creating portfolio section
 const portfolioContentHtml = portfolio.map((proj, i) => {    
-    const html1 = `
+    const github = proj.github ? `<a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>` : '';
+    const html1a = `
     <div class="project wrap">
     <div class="proj-header">
         <a href="${proj.link}" target="_blank">
             <h4><span>${proj.css}: </span>${proj.title}</h4>
         </a>
         <div class="link">
-            <a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+            ${github}
             <a href="${proj.link}" target="_blank" class="ext-link"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
         </div>
     </div>
         <div class="proj-card">
+    `
+    const html1b = i === 0 ? 
+    `   <iframe src="${proj.link}" target="_blank" class="proj-img-link"></iframe>` 
+    : 
+    `
         <a href="${proj.link}" target="_blank" class="proj-img-link"><img class="proj-img" src="${proj.img}" alt="Project image"></a>
+    `
+
+    const html1c = `
             <div class="proj-desc">
                 <ul class="highlight">
     `
@@ -93,7 +102,7 @@ const portfolioContentHtml = portfolio.map((proj, i) => {
         </div> 
     </div>
     `
-    return html1 + html2 + html3
+    return html1a + html1b + html1c + html2 + html3
     
 }).join('')
 

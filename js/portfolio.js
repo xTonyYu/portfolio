@@ -1,6 +1,15 @@
 const portfolio = [
     {
         css: 'flex-grow',
+        title: "Local Shops E-commerce/Marketplace Site (a pre-seed startup)",
+        link: 'http://www.youtube.com/embed/fn-rZhGZ1Kg',
+        github: null,
+        img: '',
+        skillsApplied: ['React (hooks, Context)', 'PostgreSQL', 'Golang', 'Payment API', 'Agile'],
+        desc: `A pre-seed startup to create a marketplace that connects local buyers to local sellers. It is driven to empower people to support local businesses and provide local businesses the resources to do business in any environment they choose.`
+    },
+    {
+        css: 'flex-grow',
         title: "MERN Stack E-commerce Site With Inventory App",
         link: 'https://plumpear-store.herokuapp.com/login',
         github: 'https://github.com/xTonyYu/Plum-and-Pear-client',
