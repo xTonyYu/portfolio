@@ -79,8 +79,8 @@ const portfolioContentHtml = portfolio.map((proj, i) => {
     </div>
         <div class="proj-card">
     `
-    const html1b = i === 0 ? 
-    `   <iframe src="${proj.link}" target="_blank" class="proj-img-link"></iframe>` 
+    const html1b = proj.useIFrame ? 
+    `   <iframe src="${proj.link}" target="_blank" class="proj-img-link proj-img"></iframe>` 
     : 
     `
         <a href="${proj.link}" target="_blank" class="proj-img-link"><img class="proj-img" src="${proj.img}" alt="Project image"></a>
