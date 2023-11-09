@@ -1,7 +1,7 @@
 const portfolio = [
     {
         css: 'flex-grow',
-        title: "Investment Advice from Mob Boss - OpenAI",
+        title: "AI Investment Advice from Mob Boss",
         github: 'https://github.com/xTonyYu/financial-advice',
         link: null,
         img: './images/advice.gif',

@@ -150,7 +150,6 @@ p,
     width: 100%;
 }
 .wrap {
-    margin-left: 10px;
     margin-bottom: 50px;
 }
 
@@ -204,7 +203,7 @@ p,
 }
 
 .front-page {
-    margin: 20px;
+    margin: 10vwpx;
     margin-left: 20vw;
     text-align: left;
     z-index: 50;
@@ -235,17 +234,25 @@ p,
 
 /* about-me */
 
-
-.img-of-me {
-    filter: drop-shadow(15px 15px 10px black);
-    border-radius: 10px;
+#about-me p,
+#about-me img {
+    margin: 16px 0 0 10px;
 }
-#about-me p {
-    margin: 16px 0 0;
+#about-me .skills  {
+    margin-left: 10px;
 }
-#about-me .wrap div {
+#about-me .skills div {
     display: inline-block;
     margin: 3px 5px;
+}
+#about-me .img-of-me {
+    filter: drop-shadow(15px 15px 10px rgb(61, 59, 59));
+    border-radius: 10px;
+}
+#about-me .resume {
+    filter: drop-shadow(15px 15px 10px rgb(61, 59, 59));
+    border-radius: 12px;
+    max-width: 200px;
 }
 
 .icon, .fab {
@@ -468,7 +475,7 @@ iframe {
 
     #about-me .wrap {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
     #about-me p {
         width: 97%;
