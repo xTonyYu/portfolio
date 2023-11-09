@@ -5,4 +5,3 @@ Technology Used:
 Javascript
 HTML
 CSS
-Bootstrap
