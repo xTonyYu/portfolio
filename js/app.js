@@ -2,13 +2,12 @@ console.log("Tony's portfolio")
 
 // navbar toggler click event
 $('.navbar-toggler').on('click', function() {
-    this.classList.toggle('opened')    
+    this.classList.toggle('opened')
     $('.navbar').toggleClass('border-radius-LL')
 })
 
 // navbar click then slide down to the section
 $(document).on('click', 'a[href^="#"]', function(e) {
-    e.preventDefault();
     if (this.innerText!== '') {
         this.classList.add('active')
     }
@@ -18,9 +17,6 @@ $(document).on('click', 'a[href^="#"]', function(e) {
         return this.ariaExpanded ? false : true
     } )
     $('.navbar-collapse').toggleClass('show')
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
 });
 
 // highlight nav item based on page position
@@ -64,8 +60,10 @@ function highlightNavItem() {
 $(window).on('scroll', debounce(highlightNavItem) )
 
 // creating portfolio section
-const portfolioContentHtml = portfolio.map((proj, i) => {    
+const portfolioContentHtml = portfolio.map((proj, i) => {
     const github = proj.github ? `<a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>` : '';
+    const link = proj.link ? `<a href="${proj.link}" target="_blank" class="ext-link"><i class="fas fa-external-link-square-alt fa-2x"></i></a>` : '';
+
     const html1a = `
     <div class="project wrap">
     <div class="proj-header">
@@ -74,16 +72,16 @@ const portfolioContentHtml = portfolio.map((proj, i) => {
         </a>
         <div class="link">
             ${github}
-            <a href="${proj.link}" target="_blank" class="ext-link"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
+            ${link}
         </div>
     </div>
         <div class="proj-card">
     `
-    const html1b = proj.useIFrame ? 
-    `   <iframe src="${proj.link}" target="_blank" class="proj-img-link proj-img"></iframe>` 
-    : 
+    const html1b = proj.useIFrame ?
+    `   <iframe src="${proj.link}" target="_blank" class="proj-img-link proj-img"></iframe>`
+    :
     `
-        <a href="${proj.link}" target="_blank" class="proj-img-link"><img class="proj-img" src="${proj.img}" alt="Project image"></a>
+        <a href="${proj.link || proj.github}" target="_blank" class="proj-img-link"><img class="proj-img" src="${proj.img}" alt="Project image"></a>
     `
 
     const html1c = `
@@ -99,11 +97,11 @@ const portfolioContentHtml = portfolio.map((proj, i) => {
                 </ul>
                 <p>${proj.desc}</p>
             </div>
-        </div> 
+        </div>
     </div>
     `
     return html1a + html1b + html1c + html2 + html3
-    
+
 }).join('')
 
 $('.project-list').append(portfolioContentHtml)

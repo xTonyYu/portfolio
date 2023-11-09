@@ -12,6 +12,7 @@
     padding: 0;
     margin: 0;
     color: white;
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -132,7 +133,7 @@ h2 {
 }
 h3 {
     margin: 15px auto;
-}    
+}
 h5 {
     font-size: 16px;
     color: var(--calm-blue);
@@ -189,9 +190,15 @@ p,
     background-size: cover;
     z-index: 1;
 }
-.linkedin-photo {
-    /* filter: drop-shadow(15px 15px 10px black); */
-    /* border-radius: 10px; */
+.tony {
+    filter: drop-shadow(0px 0px 0px);
+    transition: all 0.5s linear;
+}
+.tony:hover {
+    color: var(--calm-blue);
+    filter: drop-shadow(10px -10px 4px rgb(99, 99, 99));
+}
+.photo {
     width: 0;
     float: right;
 }
@@ -241,6 +248,10 @@ p,
     margin: 3px 5px;
 }
 
+.icon, .fab {
+    vertical-align: middle;
+}
+
 .icon {
     background-color: white;
     background-size: contain;
@@ -252,7 +263,8 @@ p,
     height: 28px;
 }
 #SQL {
-    background-image: url("../images/sql.png");
+    background-color: transparent;
+    background-image: url("../images/postgresql.svg");
 }
 #jquery {
     background-image: url("../images/jquery-icon-png-25.jpg");
@@ -280,6 +292,20 @@ p,
     width: 40px;
     height: 20px;
 }
+#ruby {
+    background-image: url("../images/ruby.svg");
+}
+#rails {
+    background-image: url("../images/rails.svg");
+}
+#git {
+    background-color: transparent;
+    background-image: url("../images/git.svg");
+}
+#figma {
+    background-color: transparent;
+    background-image: url("../images/figma.svg");
+}
 
 #about-me .sub-container .wrap:last-child,
 #portfolio .sub-container .wrap:last-child {
@@ -295,7 +321,7 @@ p,
 .project a {
     text-decoration: none;
 }
-#portfolio h4, 
+#portfolio h4,
 #portfolio h5,
 #portfolio span {
     display: inline;
@@ -352,10 +378,13 @@ p,
     max-width: 330px;
     max-height: 250px;
     margin-bottom: 15px;
+    border-radius: 10px;
+    /* overflow: hidden; */
 }
 .proj-img {
     width: 100%;
-    object-fit: contain;
+    max-height: 100%;
+    object-fit: cover;
     filter: sepia(100%) hue-rotate(150deg) brightness(0.7);
     transition: ease-in-out 0.2s;
     border-radius: 10px;
@@ -489,7 +518,7 @@ iframe {
         width: 280px;
         padding: 8px 0 0 0;
     }
-    
+
     .border-radius-LL {
         border-radius: 0 10px 0 0;
         transition: all linear 0s;
