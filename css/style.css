@@ -163,6 +163,11 @@ p,
     width: 100%;
     padding: 0 25px;
 }
+.pod h2,
+.sub-container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
 
 /* hero */
 
