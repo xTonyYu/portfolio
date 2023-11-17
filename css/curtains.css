@@ -124,27 +124,39 @@
 }
 
 @keyframes top-down-curtains {
-    0%, 100% {
+    /* 0%, 100% {
         background: transparent;
+    } */
+    0% {
+        background: linear-gradient(var(--coral) 1%, var(--green) 4%, var(--pink) 7%, var(--calm-yellow) 10%, transparent 11%);
     }
-    20% {
-        background: linear-gradient(var(--calm-yellow) 10%, transparent 20%, transparent 95%, var(--calm-yellow) 98%);
-    }
-    40% {
-        background: linear-gradient(var(--calm-yellow) 10%, transparent 40%, transparent 92%, var(--calm-yellow) 93%);
-    }
-
-    50% {
-        background: linear-gradient(var(--calm-yellow) 10%, transparent 60%, transparent 81%, var(--calm-yellow) 83%);
+    15% {
+        background: linear-gradient(transparent 3%,
+        var(--coral) 10%, var(--green) 20%, var(--pink) 22%, var(--calm-yellow) 35%, transparent 36%);
     }
 
+    30% {
+        background: linear-gradient(transparent 3%,
+        var(--coral) 10%, var(--green) 20%, var(--pink) 22%, var(--calm-yellow) 55%, transparent 56%);
+    }
+
+    45% {
+        background: linear-gradient(transparent 18%,
+        var(--coral) 30%, var(--green) 40%, var(--pink) 43%, var(--calm-yellow) 75%, transparent 76%);
+    }
     60% {
-        background: linear-gradient(transparent 20%, var(--calm-yellow), var(--calm-yellow), transparent 98%);
+        background: linear-gradient(transparent 38%,
+        var(--coral) 50%, var(--green) 60%, var(--pink) 63%, var(--calm-yellow) 95%, transparent 96%);
     }
-    80% {
-        background: linear-gradient(transparent 40%, var(--calm-yellow), var(--calm-yellow), transparent 93%);
+    75% {
+        background: linear-gradient(transparent 58%,
+        var(--coral) 70%, var(--green) 80%, var(--pink) 83%, var(--calm-yellow) 100%);
     }
-    95% {
-        background: linear-gradient(transparent 78%, var(--calm-yellow) 83%, transparent 87%);
+		90% {
+			background: linear-gradient(transparent 78%,
+        var(--coral) 90%, var(--green) 99%, var(--pink) 100%);
+		}
+		100% {
+        background: transparent;
     }
 }

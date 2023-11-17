@@ -15,7 +15,7 @@ const portfolio = [
         link: 'https://xtonyyu.github.io/credit_card/',
         img: './images/citicard.gif',
         skillsApplied: ['HTML', 'CSS', 'Responsive design'],
-        desc: `A realistic responsive credit card animation. Background image was created using SVG <circle> function to achieve partial circles`,
+        desc: `A responsive credit card animation that was modeled from my own card. Background image was created using SVG circle function to achieve the arc design.`,
     },
     {
         css: 'flex-wrap',

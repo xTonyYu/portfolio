@@ -74,8 +74,8 @@ button:focus {
 .navbar-nav .nav-item > a{
     font-weight: 300;
     width: 100%;
-    color: white !important;
-    transition: ease-in-out 0.35s;
+    transition: ease-in-out 0.2s;
+    Border-bottom: 2px solid transparent ;
 }
 .navbar-nav .nav-item .active,
 .navbar-nav .nav-item:hover > a {
@@ -128,8 +128,6 @@ button:focus {
     stroke-dashoffset: -134;
     stroke-width: var(--stroke-width);
   }
-
-/*  */
 
 /* Main */
 
@@ -408,7 +406,7 @@ p,
     max-height: 250px;
     margin-bottom: 15px;
     border-radius: 10px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .proj-img {
     width: 100%;
