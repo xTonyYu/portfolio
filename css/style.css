@@ -3,6 +3,17 @@
     --calm-blue:rgb(136,219,255);
     --calm-yellow:rgb(220,185,116);
     --calm-coral:rgb(211,139,112);
+
+    --blue:#b3e3f7;
+    --brown:#634c44;
+    --coral:#ed7448;
+    --green:#abe773;
+    --pink:#fcbcda;
+    --purple:#9b9ef0;
+    --turquoise:#15a0cb;
+    --yellow:#ffef94;
+
+    --transition-time: 0.8s
 }
 
 * {
@@ -64,13 +75,14 @@ button:focus {
     font-weight: 300;
     width: 100%;
     color: white !important;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.35s;
 }
-.active,
+.navbar-nav .nav-item .active,
 .navbar-nav .nav-item:hover > a {
     Border-bottom: 2px solid var(--calm-yellow) ;
     padding-top: 13px;
     padding-bottom: 0px;
+    animation: 0.2s top-down-curtains 1 ease-in-out;
 }
 
 /*  Animated hamburger menu by Chris Coyier https://css-tricks.com/line-animated-hamburger-menu/*/
@@ -197,18 +209,23 @@ p,
 .tony {
     filter: drop-shadow(0px 0px 0px);
     transition: all 0.5s linear;
+    /* background: repeating-linear-gradient(-90deg, blue, red 50%); */
+    text-shadow:1px 1px 10px var(--calm-blue);
 }
 .tony:hover {
-    color: var(--calm-blue);
-    filter: drop-shadow(10px -10px 4px rgb(99, 99, 99));
+    /* color: var(--calm-blue); */
+    /* filter: drop-shadow(10px -10px 4px rgb(99, 99, 99)); */
+    text-shadow:1px 1px 20px #fff, 1px 1px 20px #ccc;
+    text-shadow:1px 1px 20px var(--calm-blue), 1px 1px 20px var(--calm-blue);
 }
+
 .photo {
     width: 0;
     float: right;
 }
 
 .front-page {
-    margin: 10vwpx;
+    margin: 10vw;
     margin-left: 20vw;
     text-align: left;
     z-index: 50;
@@ -553,6 +570,7 @@ iframe {
         Border-bottom: transparent ;
         Border-left: 3px solid var(--calm-yellow) ;
         padding: 8px 20px;
+        animation: none;
     }
 
     .pod {

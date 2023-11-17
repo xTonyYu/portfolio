@@ -2,7 +2,7 @@ const portfolio = [
     {
         css: 'flex-grow',
         title: "AI Investment Advice from Mob Boss",
-        github: 'https://github.com/xTonyYu/financial-advice',
+        github: 'https://github.com/xTonyYu/ai-financial-advice',
         link: null,
         img: './images/advice.gif',
         skillsApplied: ['OpenAI API', 'Next.js', 'React (hooks)', 'JavaScript'],

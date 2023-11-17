@@ -50,9 +50,7 @@ function highlightNavItem() {
         const sectionPassed = winBottom > sectionBottom
         if (highlightItem && !sectionPassed) {
             $('.nav-link').removeClass('active')
-            if (sec.id !== 'hero') {
-                $(`#${sec.id}-link`).addClass('active')
-            }
+            $(`#${sec.id}-link`).addClass('active')
         }
     })
 }
