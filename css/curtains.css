@@ -1,124 +1,46 @@
 #curtains {
   position: absolute;
   width: 100vw;
-  /* height: 100vh; */
   animation: var(--transition-time) rainbow-curtains 1 linear;
   z-index: 999;
 }
 
 @keyframes rainbow-curtains {
-  0%, 5% {
+  0%, 8% {
   	height: 100vh;
     background-color: white;
   }
-  11% {
-    background: linear-gradient(90deg,
-                var(--brown) 5%, var(--yellow) 5% 15%, var(--blue) 15% 20%,
-                white 20% 80%,
-                var(--pink) 80% 90%, var(--turquoise) 90% 96%, var(--coral) 96%
-                );
-  }
-  17%{
-    background: linear-gradient(90deg,
-                var(--brown) 7%, var(--yellow) 7% 19%, var(--blue) 17% 27%,
-                white 27% 70%,
-                var(--pink) 70% 84%, var(--turquoise) 84% 94%, var(--coral) 94%
-                );
-  }
-  23% {
-    background: linear-gradient(90deg, transparent 3%,
-                var(--brown) 3% 10%, var(--yellow) 10% 22%, var(--green) 23%, var(--blue) 23% 34%,
-                white 34% 64%,
-                var(--pink) 64% 78%, var(--purple) 78% 79%, var(--turquoise) 79% 91%, var(--coral) 91% 97%,
-                transparent 97%
-                );
-  }
-  29%{
-    background: linear-gradient(90deg, transparent 8%,
-                var(--brown) 8% 13%, var(--yellow) 13% 25%, var(--green) 25% 30%, var(--blue) 30% 43%,
-                white 43% 49%,
-                var(--pink) 49% 63%, var(--purple) 63% 70%, var(--turquoise) 70% 82%, var(--coral) 82% 92%,
-                transparent 92%
-                );
-  }
-  35% {
-    background: linear-gradient(90deg, transparent 11%,
-                var(--brown) 11% 18%, var(--yellow) 18% 27%, var(--green) 27% 35%, var(--blue) 35% 45%,
-                var(--pink) 45% 59%, var(--purple) 59% 72%, var(--turquoise) 72% 82%, var(--coral) 82% 89%,
-                transparent 89%
-                );
-  }
-  41% {
-    background: linear-gradient(90deg, transparent 14%,
-                var(--brown) 14% 17%, var(--yellow) 17% 25%, var(--green) 25% 37%, var(--blue) 37% 44%,
-                transparent 44% 46%,
-                var(--pink) 46% 57%, var(--purple) 57% 74%, var(--turquoise) 74% 81%, var(--coral) 81% 86%,
-                transparent 86%
-                );
-  }
-  47% {
-    background: linear-gradient(90deg, transparent 17%,
-                var(--brown) 17% 18%, var(--yellow) 18% 23%, var(--green) 23% 35%, var(--blue) 35% 40%,
-                transparent 40% 50%,
-                var(--pink) 46% 57%, var(--purple) 57% 74%, var(--turquoise) 74% 81%, var(--coral) 81% 83%,
-                transparent 83%
-                );
-  }
-  53% {
-    background: linear-gradient(90deg, transparent 20%,
-                var(--brown) 20% 21%, var(--yellow) 21% 23%, var(--green) 23% 34%, var(--blue) 34% 37%,
-                transparent 37% 55%,
-                var(--pink) 55% 59%, var(--purple) 59% 74%, var(--turquoise) 74% 79%, var(--coral) 79% 80%,
-                transparent 80%
-                );
-  }
-  59% {
-    background: linear-gradient(90deg, transparent 25%,
-                var(--brown) 25% 26%, var(--yellow) 26% 27%, var(--green) 27% 32%, var(--blue) 32% 33%,
-                transparent 33% 58%,
-                var(--pink) 58% 60%, var(--purple) 60% 71%, var(--turquoise) 71% 74%, var(--coral) 74% 75%,
-                transparent 75%
-                );
-  }
-  65% {
-    background: linear-gradient(90deg, transparent 28%,
-                var(--brown) 28% 29%, var(--yellow) 29%, var(--green) 30% 31%, var(--blue)31% 32%,
-                transparent 32% 59%,
-                var(--pink) 59% 60%, var(--purple) 60% 69%, var(--turquoise) 69% 71%, var(--coral) 71% 72%,
-                transparent 72%
-                );
-  }
-  71% {
-    background: linear-gradient(90deg, transparent 30%,
-                var(--yellow) 30%, var(--green) 30.5%, white 31%, var(--green) 31.5%, var(--blue)32%,
-                transparent 32% 60%,
-                var(--pink) 60% 61%, var(--purple) 61% 68%, var(--turquoise) 68% 69%, var(--coral) 69% 70%,
-                transparent 70%
-                );
-  }
-  77% {
-    background: linear-gradient(90deg, transparent 31%,
-                white 31%,
-                transparent 32% 61%,
-                var(--pink) 61%, var(--purple) 62% 63%, var(--turquoise) 64%, var(--coral) 64% 65%,
-                transparent 65%
-                );
-  }
-  83% {
-    background: linear-gradient(90deg, transparent 61%,
-                var(--pink) 61%, var(--purple) 61.5% , white 62%, var(--purple) 62.5%, var(--turquoise) 62.5%, var(--coral) 63%,
-                transparent 63%
-                );
-  }
-  89% {
-  	height: 100vh;
-    background: linear-gradient(90deg, transparent 61%,
-                white 62%,
-                transparent 62%
-                );
+  9% {  background:  linear-gradient(90deg, var(--brown) 2% , var(--yellow) 2% 7%, var(--blue) 7% 10%, white 10% 90%, var(--pink) 90% 95%, var(--turquoise) 95% 98%, var(--coral) 98%); }
+  13% {  background:  linear-gradient(90deg, var(--brown) 5% , var(--yellow) 5% 15%, var(--blue) 15% 20%, white 20% 80%, var(--pink) 80% 90%, var(--turquoise) 90% 96%, var(--coral) 96%); }
+  17% {  background:  linear-gradient(90deg, var(--brown) 6% , var(--yellow) 6% 17%, var(--blue) 17% 23.5%, white 23.5% 75%, var(--pink) 75% 87%, var(--turquoise) 87% 95%, var(--coral) 95%); }
+  21% {  background:  linear-gradient(90deg, var(--brown) 7% , var(--yellow) 7% 19%, var(--blue) 19% 27%, white 27% 70%, var(--pink) 70% 84%, var(--turquoise) 84% 94%, var(--coral) 94%); }
+  25% {  background:  linear-gradient(90deg, transparent 2% , var(--brown) 2% 8.5%, var(--yellow) 8.5% 20.5%, var(--green) 21% , var(--blue) 21% 30.5%, white 30.5% 67%, var(--pink) 67% 81%, var(--turquoise) 81.5% 92.5%, var(--coral) 92.5% 98%, transparent 98% ); }
+  28% {  background:  linear-gradient(90deg, transparent 3% , var(--brown) 3% 10%, var(--yellow) 10% 22%, var(--green) 23% , var(--blue) 23% 34%, white 34% 64%, var(--pink) 64% 78%, var(--purple) 78% 79%, var(--turquoise) 79% 91%, var(--coral) 91% 97%, transparent 97% ); }
+  31% {  background:  linear-gradient(90deg, transparent 5.5% , var(--brown) 5.5% 11.5%, var(--yellow) 11.5% 23.5%, var(--green) 23.5% 26.5%, var(--blue) 26.5% 38.5%, white 38.5% 56.5%, var(--pink) 56.5% 70.5%, var(--purple) 70.5% 74.5%, var(--turquoise) 74.5% 86.5%, var(--coral) 86.5% 94.5%, transparent 94.5% ); }
+  34% {  background:  linear-gradient(90deg, transparent 8% , var(--brown) 8% 13%, var(--yellow) 13% 25%, var(--green) 25% 30%, var(--blue) 30% 43%, white 43% 49%, var(--pink) 49% 63%, var(--purple) 63% 70%, var(--turquoise) 70% 82%, var(--coral) 82% 92%, transparent 92% ); }
+  37% {  background:  linear-gradient(90deg, transparent 9.5% , var(--brown) 9.5% 15.5%, var(--yellow) 15.5% 26%, var(--green) 26% 32.5%, var(--blue) 32.5% 44%, white 44% 47%, var(--pink) 47% 61%, var(--purple) 61% 71%, var(--turquoise) 71% 82%, var(--coral) 82% 90.5%, transparent 90.5% ); }
+  40% {  background:  linear-gradient(90deg, transparent 11% , var(--brown) 11% 18%, var(--yellow) 18% 27%, var(--green) 27% 35%, var(--blue) 35% 45%, var(--pink) 45% 59%, var(--purple) 59% 72%, var(--turquoise) 72% 82%, var(--coral) 82% 89%, transparent 89% ); }
+  43% {  background:  linear-gradient(90deg, transparent 12.5% , var(--brown) 12.5% 17.5%, var(--yellow) 17.5% 26%, var(--green) 26% 36%, var(--blue) 36% 44.5%, transparent 44.5% 45.5%, var(--pink) 45.5% 58%, var(--purple) 58% 73%, var(--turquoise) 73% 81.5%, var(--coral) 81.5% 87.5%, transparent 87.5% ); }
+  46% {  background:  linear-gradient(90deg, transparent 14% , var(--brown) 14% 17%, var(--yellow) 17% 25%, var(--green) 25% 37%, var(--blue) 37% 44%, transparent 44% 46%, var(--pink) 46% 57%, var(--purple) 57% 74%, var(--turquoise) 74% 81%, var(--coral) 81% 86%, transparent 86% ); }
+  49% {  background:  linear-gradient(90deg, transparent 15.5% , var(--brown) 15.5% 17.5%, var(--yellow) 17.5% 24%, var(--green) 24% 36%, var(--blue) 36% 42%, transparent 42% 48%, var(--pink) 48% 57%, var(--purple) 57% 74%, var(--turquoise) 74% 81%, var(--coral) 81% 84.5%, transparent 84.5% ); }
+  52% {  background:  linear-gradient(90deg, transparent 17% , var(--brown) 17% 18%, var(--yellow) 18% 23%, var(--green) 23% 35%, var(--blue) 35% 40%, transparent 40% 50%, var(--pink) 50% 57%, var(--purple) 57% 74%, var(--turquoise) 74% 81%, var(--coral) 81% 83%, transparent 83% ); }
+  55% {  background:  linear-gradient(90deg, transparent 18.5% , var(--brown) 18.5% 19.5%, var(--yellow) 19.5% 23%, var(--green) 23% 34.5%, var(--blue) 34.5% 38.5%, transparent 38.5% 52.5%, var(--pink) 52.5% 58%, var(--purple) 58% 74%, var(--turquoise) 74% 80%, var(--coral) 80% 81.5%, transparent 81.5% ); }
+  58% {  background:  linear-gradient(90deg, transparent 20% , var(--brown) 20% 21%, var(--yellow) 21% 23%, var(--green) 23% 34%, var(--blue) 34% 37%, transparent 37% 55%, var(--pink) 55% 59%, var(--purple) 59% 74%, var(--turquoise) 74% 79%, var(--coral) 79% 80%, transparent 80% ); }
+  61% {  background:  linear-gradient(90deg, transparent 22.5% , var(--brown) 22.5% 23.5%, var(--yellow) 23.5% 25%, var(--green) 25% 33%, var(--blue) 33% 35%, transparent 35% 56.5%, var(--pink) 56.5% 59.5%, var(--purple) 59.5% 72.5%, var(--turquoise) 72.5% 76.5%, var(--coral) 76.5% 77.5%, transparent 77.5% ); }
+  64% {  background:  linear-gradient(90deg, transparent 25% , var(--brown) 25% 26%, var(--yellow) 26% 27%, var(--green) 27% 32%, var(--blue) 32% 33%, transparent 33% 58%, var(--pink) 58% 60%, var(--purple) 60% 71%, var(--turquoise) 71% 74%, var(--coral) 74% 75%, transparent 75% ); }
+  67% {  background:  linear-gradient(90deg, transparent 26.5% , var(--brown) 26.5% 27.5%, var(--yellow) 27.5% 27%, var(--green) 28.5% 31.5%, var(--blue) 31.5% 32.5%, transparent 32.5% 58.5%, var(--pink) 58.5% 60%, var(--purple) 60% 70%, var(--turquoise) 70% 72.5%, var(--coral) 72.5% 73.5%, transparent 73.5% ); }
+  70% {  background:  linear-gradient(90deg, transparent 28% , var(--brown) 28% 29%, var(--yellow) 29% , var(--green) 30% 31%, var(--blue) 31% 32%, transparent 32% 59%, var(--pink) 59% 60%, var(--purple) 60% 69%, var(--turquoise) 69% 71%, var(--coral) 71% 72%, transparent 72% ); }
+  74% {  background:  linear-gradient(90deg, transparent 29% ,var(--yellow) 29% , var(--green) 30% , var(--blue) 32% , transparent 32% 59.5%, var(--pink) 59.5% 60.5%, var(--purple) 60.5% 68.5%, var(--turquoise) 68.5% 70%, var(--coral) 70% 71%, transparent 71% ); }
+  78% {  background:  linear-gradient(90deg, transparent 30% , var(--yellow) 30% , var(--green) 30.5% , white 31% , var(--green) 31.5% , var(--blue) 32% , transparent 32% 60%, var(--pink) 60% 61%, var(--purple) 61% 68%, var(--turquoise) 68% 69%, var(--coral) 69% 70%, transparent 70% ); }
+  82% {  background:  linear-gradient(90deg, transparent 30.5% , white 31% , transparent 32% 60.5%, var(--pink) 60.5% 61.5%, var(--purple) 61.5% 65.5%, var(--turquoise) 65.5% 66.5%, var(--coral) 66.5% 67.5%, transparent 67.5% ); }
+  86% {  background:  linear-gradient(90deg, transparent 31% , white 31% , transparent 32% 61%, var(--pink) 61% , var(--purple) 62% 63%, var(--turquoise) 64% , var(--coral) 64% 65%, transparent 65% ); }
+  90% {  background:  linear-gradient(90deg, transparent 61% , var(--pink) 61% , var(--purple) 61.5% , white 62% , var(--purple) 62.5% , var(--turquoise) 62.5% , var(--coral) 63% , transparent 63% ); }
+  94% {  background:  linear-gradient(90deg, transparent 61% , white 62% , transparent 62% );}
+  99% {
+    height: 100vh;
   }
   100% {
-  	height: 0;
+    height: 0;
     background: transparent;
   }
 }

@@ -560,7 +560,7 @@ iframe {
     }
 
     .nav-item {
-        padding: 0 33px;
+        padding: 0 0 0 33px;
     }
 
     .navbar-nav .nav-link.active,

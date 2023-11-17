@@ -1,4 +1,5 @@
 console.log("Tony's portfolio")
+const sections = document.querySelectorAll('section')
 
 // navbar toggler click event
 $('.navbar-toggler').on('click', function() {
@@ -19,28 +20,7 @@ $(document).on('click', 'a[href^="#"]', function(e) {
     $('.navbar-collapse').toggleClass('show')
 });
 
-// highlight nav item based on page position
-function debounce(func, wait = 100, immediate = false) {
-    let timeout;
-    return function() {
-        const context = this,
-            args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) {
-                func.apply(context, args);
-            }
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) {
-            func.apply(context, args);
-        }
-    };
-}
-
-const sections = document.querySelectorAll('section')
+// highlight the corresponding navbar item when scroll to the section on the page
 function highlightNavItem() {
     sections.forEach(sec => {
         const winBottom = window.scrollY + window.innerHeight
@@ -55,7 +35,16 @@ function highlightNavItem() {
     })
 }
 
-$(window).on('scroll', debounce(highlightNavItem) )
+function debounce(func, wait = 100) {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => { func.apply(this, args) }, wait);
+    };
+}
+
+$(window).on('scroll', debounce(highlightNavItem))
+
 
 // creating portfolio section
 const portfolioContentHtml = portfolio.map((proj, i) => {
