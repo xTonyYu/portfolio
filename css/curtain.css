@@ -1,11 +1,11 @@
-#curtains {
+#curtain {
   position: absolute;
   width: 100vw;
-  animation: var(--transition-time) rainbow-curtains 1 linear;
+  animation: var(--transition-time) rainbow-curtain 1 linear;
   z-index: 999;
 }
 
-@keyframes rainbow-curtains {
+@keyframes rainbow-curtain {
   0%, 8% {
   	height: 100vh;
     background-color: white;
@@ -45,7 +45,7 @@
   }
 }
 
-@keyframes top-down-curtains {
+@keyframes top-down-curtain {
     /* 0%, 100% {
         background: transparent;
     } */

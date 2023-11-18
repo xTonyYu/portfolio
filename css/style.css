@@ -82,7 +82,7 @@ button:focus {
     Border-bottom: 2px solid var(--calm-yellow) ;
     padding-top: 13px;
     padding-bottom: 0px;
-    animation: 0.2s top-down-curtains 1 ease-in-out;
+    animation: 0.2s top-down-curtain 1 ease-in-out;
 }
 
 /*  Animated hamburger menu by Chris Coyier https://css-tricks.com/line-animated-hamburger-menu/*/
