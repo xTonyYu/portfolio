@@ -47,48 +47,97 @@ $(window).on('scroll', debounce(highlightNavItem))
 
 
 // creating portfolio section
-const portfolioContentHtml = portfolio.map((proj, i) => {
+const createProjectDiv = (proj) => {
+    const projectDiv = document.createElement('div')
+    const projHeader = createProjHeader(proj)
+    const projCard = createProjCard(proj)
+
+    projectDiv.classList.add("project", "wrap")
+    projectDiv.insertAdjacentElement('beforeend', projHeader)
+    projectDiv.insertAdjacentElement('beforeend', projCard)
+
+    return projectDiv
+}
+
+const createProjHeader = (proj) => {
+    const projHeader = document.createElement('div')
+    const aTag = document.createElement('a')
+    const linkDiv = document.createElement('div')
     const github = proj.github ? `<a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>` : '';
     const link = proj.link ? `<a href="${proj.link}" target="_blank" class="ext-link"><i class="fas fa-external-link-square-alt fa-2x"></i></a>` : '';
 
-    const html1a = `
-    <div class="project wrap">
-    <div class="proj-header">
-        <a href="${proj.link}" target="_blank">
-            <h4><span>${proj.css}: </span>${proj.title}</h4>
-        </a>
-        <div class="link">
-            ${github}
-            ${link}
-        </div>
-    </div>
-        <div class="proj-card">
-    `
-    const html1b = proj.useIFrame ?
-    `   <iframe src="${proj.link}" target="_blank" class="proj-img-link proj-img"></iframe>`
-    :
-    `
-        <a href="${proj.link || proj.github}" target="_blank" class="proj-img-link"><img class="proj-img" src="${proj.img}" alt="Project image"></a>
-    `
+    projHeader.classList.add("proj-header")
 
-    const html1c = `
-            <div class="proj-desc">
-                <ul class="highlight">
-    `
+    aTag.href = proj.link || proj.github
+    aTag.target = '_blank'
+    aTag.innerHTML = `<h4><span>${proj.css}: </span>${proj.title}</h4>`
+    projHeader.insertAdjacentElement('beforeend', aTag)
 
-    const html2 = proj.skillsApplied.map(skill => {
-        return `<li>${skill}</li>`
-    }).join('')
+    linkDiv.classList.add('link')
+    linkDiv.innerHTML = `${github} ${link}`
+    projHeader.insertAdjacentElement('beforeend', linkDiv)
 
-    const html3 = `
-                </ul>
-                <p>${proj.desc}</p>
-            </div>
-        </div>
-    </div>
-    `
-    return html1a + html1b + html1c + html2 + html3
+    return projHeader
+}
 
-}).join('')
+const createProjCard = (proj) => {
+    const projCard = document.createElement('div')
+    const iFrameOrATag = createIFrameOrATag(proj)
+    const projDesc = createProjDesc(proj)
 
-$('.project-list').append(portfolioContentHtml)
+    projCard.classList.add("proj-card")
+    projCard.insertAdjacentElement('beforeend', iFrameOrATag)
+    projCard.insertAdjacentElement('beforeend', projDesc)
+
+    return projCard
+}
+
+const createIFrameOrATag = (proj) => {
+    let tag;
+    if (proj.useIFrame) {
+        tag = document.createElement('iframe')
+        tag.src = proj.link
+        tag.classList.add("proj-img")
+    } else {
+        tag = document.createElement('a')
+        tag.href = proj.link || proj.github
+        tag.innerHTML = `<img class="proj-img" src="${proj.img}" alt="Project ${proj.title} image">`
+    }
+
+    tag.target = '_blank'
+    tag.classList.add("proj-img-link")
+
+    return tag
+}
+
+const createProjDesc = (proj) => {
+    const projDesc = document.createElement('div')
+    const ulTag = createUlTag(proj)
+    const pTag = document.createElement('p')
+    pTag.innerHTML = proj.desc
+
+    projDesc.classList.add("proj-desc")
+    projDesc.insertAdjacentElement('beforeend', ulTag)
+    projDesc.insertAdjacentElement('beforeend', pTag)
+
+    return projDesc
+}
+
+const createUlTag = (proj) => {
+    const ulTag = document.createElement('ul')
+    ulTag.classList.add('highlight')
+
+    proj.skillsApplied.forEach(skill => {
+        const liTag = document.createElement('li')
+        liTag.innerHTML = skill
+        ulTag.insertAdjacentElement('beforeend', liTag)
+    })
+
+    return ulTag
+}
+
+portfolio.map((proj) => {
+    const projectList = document.querySelector('.project-list')
+    const project = createProjectDiv(proj)
+    projectList.insertAdjacentElement('beforeend', project)
+})
