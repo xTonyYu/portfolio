@@ -1,5 +1,6 @@
 console.log("Tony's portfolio")
 const sections = document.querySelectorAll('section')
+const projectList = document.querySelector('.project-list')
 
 // navbar toggler click event
 $('.navbar-toggler').on('click', function() {
@@ -56,15 +57,17 @@ const createProjectDiv = (proj) => {
     projectDiv.insertAdjacentElement('beforeend', projHeader)
     projectDiv.insertAdjacentElement('beforeend', projCard)
 
+    // add more projects within the "animation" project section
+    if (proj.css === 'animation') {
+        moreAnimationProj(projectDiv)
+    }
+
     return projectDiv
 }
 
 const createProjHeader = (proj) => {
     const projHeader = document.createElement('div')
     const aTag = document.createElement('a')
-    const linkDiv = document.createElement('div')
-    const github = proj.github ? `<a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>` : '';
-    const link = proj.link ? `<a href="${proj.link}" target="_blank" class="ext-link"><i class="fas fa-external-link-square-alt fa-2x"></i></a>` : '';
 
     projHeader.classList.add("proj-header")
 
@@ -72,10 +75,6 @@ const createProjHeader = (proj) => {
     aTag.target = '_blank'
     aTag.innerHTML = `<h4><span>${proj.css}: </span>${proj.title}</h4>`
     projHeader.insertAdjacentElement('beforeend', aTag)
-
-    linkDiv.classList.add('link')
-    linkDiv.innerHTML = `${github} ${link}`
-    projHeader.insertAdjacentElement('beforeend', linkDiv)
 
     return projHeader
 }
@@ -112,20 +111,36 @@ const createIFrameOrATag = (proj) => {
 
 const createProjDesc = (proj) => {
     const projDesc = document.createElement('div')
-    const ulTag = createUlTag(proj)
-    const pTag = document.createElement('p')
-    pTag.innerHTML = proj.desc
+    const skillsAndLinks = createSkillsAndLinks(proj)
+    // const skillList = createUlTag(proj)
+    // const projLinks = createProjLinks(proj)
+    const desc = document.createElement('p')
+
+    desc.innerHTML = proj.desc
 
     projDesc.classList.add("proj-desc")
-    projDesc.insertAdjacentElement('beforeend', ulTag)
-    projDesc.insertAdjacentElement('beforeend', pTag)
+    projDesc.insertAdjacentElement('beforeend', skillsAndLinks)
+    // projDesc.insertAdjacentElement('beforeend', skillList)
+    // projDesc.insertAdjacentElement('beforeend', projLinks)
+    projDesc.insertAdjacentElement('beforeend', desc)
 
     return projDesc
 }
 
+const createSkillsAndLinks = (proj) => {
+    const skillsNLinks = document.createElement('div')
+    const skillList = createUlTag(proj)
+    const projLinks = createProjLinks(proj)
+
+    skillsNLinks.classList.add('skills-n-links')
+    skillsNLinks.insertAdjacentElement('beforeend', skillList)
+    skillsNLinks.insertAdjacentElement('beforeend', projLinks)
+
+    return skillsNLinks
+}
+
 const createUlTag = (proj) => {
     const ulTag = document.createElement('ul')
-    ulTag.classList.add('highlight')
 
     proj.skillsApplied.forEach(skill => {
         const liTag = document.createElement('li')
@@ -136,8 +151,25 @@ const createUlTag = (proj) => {
     return ulTag
 }
 
+const createProjLinks = (proj) => {
+    const linkDiv = document.createElement('div')
+    const github = proj.github ? `<a href="${proj.github}" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>` : '';
+    const link = proj.link ? `<a href="${proj.link}" target="_blank" class="ext-link"><i class="fas fa-external-link-square-alt fa-2x"></i></a>` : '';
+
+    linkDiv.classList.add('link')
+    linkDiv.innerHTML = `${github} ${link}`
+
+    return linkDiv
+}
+
+const moreAnimationProj = (projectDiv) => {
+    moreAnimations.forEach((proj) => {
+        const projCard = createProjCard(proj)
+        projectDiv.insertAdjacentElement('beforeend', projCard)
+    })
+}
+
 portfolio.map((proj) => {
-    const projectList = document.querySelector('.project-list')
     const project = createProjectDiv(proj)
     projectList.insertAdjacentElement('beforeend', project)
 })

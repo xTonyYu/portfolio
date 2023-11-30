@@ -255,9 +255,7 @@ p,
 /* about-me */
 
 #about-me p,
-#about-me img {
-    margin: 16px 0 0 10px;
-}
+#about-me img,
 #about-me .skills  {
     margin-left: 10px;
 }
@@ -272,7 +270,7 @@ p,
 #about-me .resume {
     filter: drop-shadow(15px 15px 10px rgb(61, 59, 59));
     border-radius: 12px;
-    max-width: 200px;
+    max-width: 180px;
 }
 
 .icon, .fab {
@@ -370,9 +368,6 @@ p,
 }
 .link {
     display: inline-flex;
-    justify-content: flex-end;
-    margin-right: 3%;
-    flex-wrap: wrap;
 }
 .link a {
     margin-left: 10px;
@@ -439,6 +434,11 @@ li {
     color: var(--calm-coral);
 }
 
+.skills-n-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 /* contact */
 #contact {
