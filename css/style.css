@@ -176,7 +176,7 @@ p,
 .pod h2,
 .sub-container {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 800px;
 }
 
 /* hero */
@@ -389,9 +389,9 @@ p,
 }
 
 .proj-card {
-    margin-top: 16px;
+    padding: 16px 32px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -403,7 +403,7 @@ p,
     overflow: hidden;
 }
 .proj-img-link.animation {
-    width: 30%;
+    width: 46%;
 }
 .proj-img {
     width: 100%;
@@ -521,9 +521,6 @@ iframe {
 
     .proj-img-link {
         width: 97%;
-    }
-    .proj-img-link.animation {
-        width: 46%;
     }
 
     #portfolio p {
