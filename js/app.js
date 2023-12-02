@@ -57,11 +57,6 @@ const createProjectDiv = (proj) => {
     projectDiv.insertAdjacentElement('beforeend', projHeader)
     projectDiv.insertAdjacentElement('beforeend', projCard)
 
-    // // add more projects within the "animation" project section
-    // if (proj.css === 'animation') {
-    //     moreAnimationProj(projectDiv)
-    // }
-
     return projectDiv
 }
 
