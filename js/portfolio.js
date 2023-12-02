@@ -57,11 +57,19 @@ const portfolio = [
 
 const moreAnimations = [
     {
+        title: "Borg Cube is coming",
+        github: null,
+        link: 'https://codepen.io/xtonypastel/pen/yLZRmPa',
+        img: './images/borg-cube.gif',
+        skillsApplied: ['HTML', 'CSS', 'JavaScript', 'Responsive design'],
+        desc: `Borg Cube chasing the cursor`
+    },
+    {
         title: "NYC Taxi - 3D Animation with perspective",
         github: null,
         link: 'https://codepen.io/xtonypastel/pen/PoVBXKP',
         img: './images/nyctaxi.gif',
-        skillsApplied: ['HTML', 'CSS', 'JavaScript', 'Responsive design'],
+        skillsApplied: ['HTML', 'CSS', 'JavaScript'],
         desc: `Based on a painting I made, using 3D animation and perspective to show motion.`
     }
 ]

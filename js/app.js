@@ -38,9 +38,9 @@ function highlightNavItem() {
 
 function debounce(func, wait = 100) {
     let timeout;
-    return (...args) => {
+    return (e) => {
         clearTimeout(timeout);
-        timeout = setTimeout(() => { func.apply(this, args) }, wait);
+        timeout = setTimeout(() => { func(e) }, wait);
     };
 }
 
@@ -57,10 +57,10 @@ const createProjectDiv = (proj) => {
     projectDiv.insertAdjacentElement('beforeend', projHeader)
     projectDiv.insertAdjacentElement('beforeend', projCard)
 
-    // add more projects within the "animation" project section
-    if (proj.css === 'animation') {
-        moreAnimationProj(projectDiv)
-    }
+    // // add more projects within the "animation" project section
+    // if (proj.css === 'animation') {
+    //     moreAnimationProj(projectDiv)
+    // }
 
     return projectDiv
 }
@@ -81,18 +81,38 @@ const createProjHeader = (proj) => {
 
 const createProjCard = (proj) => {
     const projCard = document.createElement('div')
-    const iFrameOrATag = createIFrameOrATag(proj)
-    const projDesc = createProjDesc(proj)
 
     projCard.classList.add("proj-card")
-    projCard.insertAdjacentElement('beforeend', iFrameOrATag)
-    projCard.insertAdjacentElement('beforeend', projDesc)
+    // add more projects within the "animation" project section
+    if (proj.css === 'animation') {
+        projCard.insertAdjacentElement('beforeend', createImageAndSKills(proj))
+        moreAnimationProj(projCard)
+    } else {
+        const imageTag = createImageTag(proj)
+        const projDesc = createProjDesc(proj)
+
+        projCard.insertAdjacentElement('beforeend', imageTag)
+        projCard.insertAdjacentElement('beforeend', projDesc)
+    }
 
     return projCard
 }
 
-const createIFrameOrATag = (proj) => {
+const createImageAndSKills = (proj) => {
+    const imageAndSkiils = createImageTag(proj)
+    const skillsAndLinks = createSkillsAndLinks(proj)
+
+    skillsAndLinks.classList.add('mt-16')
+    imageAndSkiils.classList.add('animation')
+    imageAndSkiils.insertAdjacentElement('beforeend', skillsAndLinks)
+
+    return imageAndSkiils
+}
+
+const createImageTag = (proj) => {
+    const div = document.createElement('div')
     let tag;
+
     if (proj.useIFrame) {
         tag = document.createElement('iframe')
         tag.src = proj.link
@@ -104,24 +124,21 @@ const createIFrameOrATag = (proj) => {
     }
 
     tag.target = '_blank'
-    tag.classList.add("proj-img-link")
+    div.classList.add("proj-img-link")
+    div.insertAdjacentElement('afterbegin', tag)
 
-    return tag
+    return div
 }
 
 const createProjDesc = (proj) => {
     const projDesc = document.createElement('div')
     const skillsAndLinks = createSkillsAndLinks(proj)
-    // const skillList = createUlTag(proj)
-    // const projLinks = createProjLinks(proj)
     const desc = document.createElement('p')
 
     desc.innerHTML = proj.desc
 
     projDesc.classList.add("proj-desc")
     projDesc.insertAdjacentElement('beforeend', skillsAndLinks)
-    // projDesc.insertAdjacentElement('beforeend', skillList)
-    // projDesc.insertAdjacentElement('beforeend', projLinks)
     projDesc.insertAdjacentElement('beforeend', desc)
 
     return projDesc
@@ -162,10 +179,10 @@ const createProjLinks = (proj) => {
     return linkDiv
 }
 
-const moreAnimationProj = (projectDiv) => {
+const moreAnimationProj = (projCard) => {
     moreAnimations.forEach((proj) => {
-        const projCard = createProjCard(proj)
-        projectDiv.insertAdjacentElement('beforeend', projCard)
+        const imageAndSKills = createImageAndSKills(proj)
+        projCard.insertAdjacentElement('beforeend', imageAndSKills)
     })
 }
 

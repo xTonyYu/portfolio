@@ -398,14 +398,16 @@ p,
 .proj-img-link {
     width: 48%;
     max-width: 330px;
-    max-height: 250px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     border-radius: 10px;
     overflow: hidden;
 }
+.proj-img-link.animation {
+    width: 30%;
+}
 .proj-img {
     width: 100%;
-    max-height: 100%;
+    aspect-ratio: 33 / 25;
     object-fit: cover;
     filter: sepia(100%) hue-rotate(150deg) brightness(0.7);
     transition: ease-in-out 0.2s;
@@ -488,6 +490,13 @@ iframe {
     height: calc(100vh - 117px);
 }
 
+
+/* Utility */
+.mt-16 {
+    margin-top: 16px;
+}
+
+
 @media only screen and (max-width:900px) {
     .sub-container {
         padding: 0 10px;
@@ -512,6 +521,9 @@ iframe {
 
     .proj-img-link {
         width: 97%;
+    }
+    .proj-img-link.animation {
+        width: 46%;
     }
 
     #portfolio p {
@@ -573,6 +585,10 @@ iframe {
 
     .pod {
         padding: 70px 5vw 0;
+    }
+
+    .proj-img-link.animation {
+        width: 97%;
     }
 
     .proj-img {
